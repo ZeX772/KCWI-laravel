@@ -1,0 +1,178 @@
+html, body {
+  height: 100%;
+}
+
+.full-page {
+  height: 100vh;
+  width: 100vw;
+}
+
+.password-container {
+  width: 400px;
+  position: relative;                                                                    
+}
+
+.password-container input[type="password"], .password-container input[type="text"] {
+  width: 100%;
+  padding: 12px 36px 12px 12px;
+  box-sizing: border-box;
+}
+
+.password-container .fa-eye, 
+.password-container .fa-eye-slash {
+  position: absolute;
+  top: 28%;
+  right: 4%;
+  cursor: pointer;
+  color: lightgray;
+}
+.navbar-nav .show > .nav-link, .navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  background-color: white;
+  margin-right: auto;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px;
+  width: 250px;
+  border-radius: 10px;
+}
+
+.navbar-nav .show > .nav-link, .navbar-nav .sub-item .nav-link.active,
+.navbar-nav .sub-item .nav-link:hover {
+  background-color: #EBEBEB;
+  margin-right: auto;
+  box-shadow: none;
+  width: 250px;
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    width: 24rem !important;
+  }
+}
+
+.p-0 {
+  padding: 10px 10px 10px 10px !important;
+}
+
+.navbar-expand {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+  color: #409FFF;
+  background-color: var(--bs-nav-tabs-link-active-bg);
+  border-color: var(--bs-nav-tabs-link-active-border-color);
+  border-bottom: 4px solid #409FFF !important;
+  font-weight: 600;
+}
+
+.nav-tabs .nav-link {
+  margin-bottom: calc(-1 * var(--bs-nav-tabs-border-width));
+  background: none;
+  border: var(--bs-nav-tabs-border-width) solid transparent;
+  border-top-left-radius: var(--bs-nav-tabs-border-radius);
+  border-top-right-radius: var(--bs-nav-tabs-border-radius);
+}
+
+.nav-link {
+  display: block;
+  padding: 10px;
+  color: #7a7a7a;
+  font-size: 14px;
+  text-decoration: none;
+  width: auto;
+  font-weight: 600;
+  font-family: Poppins, sans-serif;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+.table > :not(caption) > * > * {
+  padding: .5rem .5rem;
+  /*border: 8px !important!important;*/
+  margin-top: 20px !important;
+  background-color: var(--bs-table-bg);
+
+  box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+}
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.topbar {
+  height: 4.375rem;
+}
+
+.mw-100 {
+  max-width: 100% !important;
+}
+
+.me-auto {
+  margin-right: auto !important;
+}
+
+@media (min-width: 576px) {
+  .d-sm-inline-block {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .my-md-0 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .ms-md-3 {
+    margin-left: 1rem !important;
+  }
+}
+
+.navbar-expand .navbar-nav {
+  flex-direction: row;
+}
+
+.navbar-expand .navbar-nav {
+  flex-direction: row;
+}
+
+.ms-auto {
+  margin-left: auto !important;
+}
+
+#dataTable {
+  border-collapse: separate;
+  border-spacing: 0px 15px;
+}
+thead th {
+    border-bottom: none;
+}                                                                
+
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  width: 10px;
+  background: url(../../tailwind/images/clipboard-image-31.png) no-repeat right center;
+  background-size: contain;
+}
+
+/* Hide the default clock icon */
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: url(../../tailwind/images/clipboard-image-31.png) no-repeat right center;
+  background-size: contain;
+}
+
+.callout-warning {
+  --callout-bg: #fff3cd;
+  --callout-border: #ffe69c;
+}
+
+.callout {
+  padding: 0.75rem;
+  margin-bottom: 1.25rem;
+  border-radius: 0.375rem;
+  background-color: var(--callout-bg, var(--bs-gray-100));
+  border-left: 0.25rem solid var(--callout-border, var(--bs-gray-300));
+}

@@ -1,0 +1,126 @@
+
+:root {
+    --cm-scolor-bodylight: #7a7a7a;
+    --cm-scolor-accent: #4a5c7a;
+    --cm-scolor-orange: #fb7d5b;
+    --cm-scolor-yellow: #fcc43e;
+    --cm-scolor-text: #303972;
+    --cm-scolor-white: #ffffff;
+    --cm-scolor-gray: #f5f5f5;
+    --cm-scolor-secondary: #aac9e4;
+    --cm-scolor-gray-3: #a098ae;
+    --cm-scolor-background: #f3f4ff;
+    --cm-scolor-green: #4cbc9a;
+    --cm-scolor-red: #ff4550;
+    --cm-scolor-boarder: #e8e8e8;
+    --cm-scolor-linear-transparent-linear-1: linear-gradient(
+      180deg,
+      rgba(251, 125, 91, 1) 0%,
+      rgba(251, 125, 91, 0) 100%
+    );
+    --cm-scolor-linear-transparent-linear-2: linear-gradient(
+      180deg,
+      rgba(252, 196, 62, 1) 0%,
+      rgba(252, 196, 62, 0) 100%
+    );
+    --cm-scolor-linear-transparent-linear-3: linear-gradient(
+      178.76deg,
+      rgba(77, 68, 181, 1) 0%,
+      rgba(48, 57, 114, 1) 100%
+    );
+    --cm-scolor-linear-transparent-purple-10: rgba(77, 68, 181, 0.1);
+    --appcolortone-secondary-1-fill: #919bab;
+  
+    /* Fonts */
+    --text-text-semi-bold-1-font-family: Poppins-SemiBold, sans-serif;
+    --text-text-semi-bold-1-font-size: 18px;
+    --text-text-semi-bold-1-line-height: normal;
+    --text-text-semi-bold-1-font-weight: 600;
+    --text-text-semi-bold-1-font-style: normal;
+    --text-text-semi-bold-2-font-family: Poppins-SemiBold, sans-serif;
+    --text-text-semi-bold-2-font-size: 14px;
+    --text-text-semi-bold-2-line-height: normal;
+    --text-text-semi-bold-2-font-weight: 600;
+    --text-text-semi-bold-2-font-style: normal;
+    --text-text-medium-1-font-family: Poppins-Medium, sans-serif;
+    --text-text-medium-1-font-size: 18px;
+    --text-text-medium-1-line-height: normal;
+    --text-text-medium-1-font-weight: 500;
+    --text-text-medium-1-font-style: normal;
+    --text-text-medium-2-font-family: Poppins-Medium, sans-serif;
+    --text-text-medium-2-font-size: 14px;
+    --text-text-medium-2-line-height: normal;
+    --text-text-medium-2-font-weight: 500;
+    --text-text-medium-2-font-style: normal;
+    --text-text-regular-1-font-family: Poppins-Regular, sans-serif;
+    --text-text-regular-1-font-size: 18px;
+    --text-text-regular-1-line-height: normal;
+    --text-text-regular-1-font-weight: 400;
+    --text-text-regular-1-font-style: normal;
+    --text-text-regular-2-font-family: Poppins-Regular, sans-serif;
+    --text-text-regular-2-font-size: 14px;
+    --text-text-regular-2-line-height: normal;
+    --text-text-regular-2-font-weight: 400;
+    --text-text-regular-2-font-style: normal;
+    --heading-heading-1-font-family: Poppins-Bold, sans-serif;
+    --heading-heading-1-font-size: 36px;
+    --heading-heading-1-line-height: normal;
+    --heading-heading-1-font-weight: 700;
+    --heading-heading-1-font-style: normal;
+    --heading-heading-2-font-family: Poppins-Bold, sans-serif;
+    --heading-heading-2-font-size: 32px;
+    --heading-heading-2-line-height: normal;
+    --heading-heading-2-font-weight: 700;
+    --heading-heading-2-font-style: normal;
+    --heading-heading-3-font-family: Poppins-Bold, sans-serif;
+    --heading-heading-3-font-size: 24px;
+    --heading-heading-3-line-height: normal;
+    --heading-heading-3-font-weight: 700;
+    --heading-heading-3-font-style: normal;
+    --heading-heading-4-font-family: Poppins-Bold, sans-serif;
+    --heading-heading-4-font-size: 18px;
+    --heading-heading-4-line-height: normal;
+    --heading-heading-4-font-weight: 700;
+    --heading-heading-4-font-style: normal;
+    --heading-heading-5-font-family: Poppins-Bold, sans-serif;
+    --heading-heading-5-font-size: 14px;
+    --heading-heading-5-line-height: normal;
+    --heading-heading-5-font-weight: 700;
+    --heading-heading-5-font-style: normal;
+    --barlow-heading-1-font-family: Barlow-SemiBold, sans-serif;
+    --barlow-heading-1-font-size: 28px;
+    --barlow-heading-1-line-height: normal;
+    --barlow-heading-1-font-weight: 600;
+    --barlow-heading-1-font-style: normal;
+    --barlow-heading-2-font-family: Barlow-Bold, sans-serif;
+    --barlow-heading-2-font-size: 24px;
+    --barlow-heading-2-line-height: normal;
+    --barlow-heading-2-font-weight: 700;
+    --barlow-heading-2-font-style: normal;
+    --barlow-copy-1-font-family: Barlow-Medium, sans-serif;
+    --barlow-copy-1-font-size: 18px;
+    --barlow-copy-1-line-height: normal;
+    --barlow-copy-1-font-weight: 500;
+    --barlow-copy-1-font-style: normal;
+    --barlow-copy-2-font-family: Barlow-Medium, sans-serif;
+    --barlow-copy-2-font-size: 16px;
+    --barlow-copy-2-line-height: normal;
+    --barlow-copy-2-font-weight: 500;
+    --barlow-copy-2-font-style: normal;
+    --barlow-copy-3-font-family: Barlow-Medium, sans-serif;
+    --barlow-copy-3-font-size: 14px;
+    --barlow-copy-3-line-height: normal;
+    --barlow-copy-3-font-weight: 500;
+    --barlow-copy-3-font-style: normal;
+    --barlow-heading-3-font-family: Barlow-SemiBold, sans-serif;
+    --barlow-heading-3-font-size: 22px;
+    --barlow-heading-3-line-height: normal;
+    --barlow-heading-3-font-weight: 600;
+    --barlow-heading-3-font-style: normal;
+  
+    /* Effects */
+    --dropshadow-rightclickpopup-box-shadow: 0px 24px 50px 0px
+      rgba(88, 88, 88, 0.25);
+    --button-inner-shadow-box-shadow: inset 0px -4px 0px 0px rgba(0, 0, 0, 0.15);
+    --innershadow-hksa-box-shadow: inset 0px 0px 25px 0px rgba(0, 0, 0, 0.5);
+  }

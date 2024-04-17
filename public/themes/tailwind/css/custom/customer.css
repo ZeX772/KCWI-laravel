@@ -1,0 +1,23 @@
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* Profile Picture */
+.avatar-circle_container {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 5.633802890777588px 5.633802890777588px 0px #23365680;
+}
+
+.avatar-circle_container img{
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+/* Buttons */
+button:disabled {
+    opacity: 0.5;
+}

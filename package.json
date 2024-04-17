@@ -1,0 +1,11 @@
+{
+  "engines": {
+    "node": "17.x"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "crypto-js": "^4.2.0",
+    "node-gyp": "^10.0.1"
+  }
+}

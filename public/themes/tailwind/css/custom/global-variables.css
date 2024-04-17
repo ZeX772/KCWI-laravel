@@ -1,0 +1,10 @@
+/* VARIABLES */
+:root {
+    --btn-primary-color: #4A5C7A;
+    --btn-danger-color: #FF4550;
+    --btn-hover-primary-color: #4a5c7ae1;
+    --btn-hover-danger-color: #fd515d;
+
+    --page-heading-color: #3B3B3B;
+    --page-heading_span-color: #7A7A7A;
+}
