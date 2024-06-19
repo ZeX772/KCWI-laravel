@@ -14,13 +14,13 @@ $routeName = Route::currentRouteName();
     <!-- @if(isset($seo->title))
     <title>{{ $seo->title }}</title>
     @else
-    <title>{{ setting('site.title', 'HKSA') . ' - ' . setting('site.description', 'Hong Kong Swimming Association') }}</title>
+    <title>{{ setting('site.title', 'BlitzWiZ') . ' - ' . setting('site.description', 'BlitzWiZ Gym') }}</title>
     @endif -->
 
     @if( null !== session('school') )
-        <title><?= session('school')['name'] != "" ? session('school')['name'] : 'Hong Kong Swimming Academy' ?></title>
+        <title><?= session('school')['name'] != "" ? session('school')['name'] : 'BlitzWiZ Gym' ?></title>
     @else
-        <title>HKSA | Hong Kong Swimming Academy</title>
+        <title>BlitzWiZ Gym</title>
     @endif
 
     <meta charset="utf-8">

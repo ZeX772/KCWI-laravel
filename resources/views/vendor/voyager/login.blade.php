@@ -20,7 +20,7 @@
     <section class="h-100" style="width: 100vw;">
             <div class="row h-100" style="margin-right: 0px;margin-left: 0px;width: 100vw;">
                 <div class="col-md-6 d-lg-flex d-xl-flex justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-center h-100" style="text-align: center;padding: 0px;width: 50vw;">
-                    <div style="width: 400px;"><img src="{{ asset('themes/tailwind/images/Logo.png') }}">
+                    <div style="width: 400px;"><img src="{{ asset('themes/tailwind/images/coach.png') }}">
                         <h1 style="font-size: 50px;font-weight: bold;color: #4A5C7A;margin-top: 50px;">Welcome to Admin Panel</h1>
                     </div>
                 </div>

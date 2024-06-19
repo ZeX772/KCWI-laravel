@@ -1,4 +1,4 @@
- @extends('theme::layouts.app')
+ {{-- @extends('theme::layouts.app')
 
 
  @section('content')
@@ -1139,4 +1139,4 @@
 		initMap();
  	});
 </script>
-@endsection
+@endsection --}}
