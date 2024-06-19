@@ -127,7 +127,7 @@
         <form method="POST" action="{{ route('request.auth-login') }}" class="text-center d-md-flex d-lg-flex d-xl-flex flex-column justify-content-md-center align-items-md-center align-items-lg-center justify-content-xl-center align-items-xl-center" style="width: 400px;height: 520px;">
             @csrf
             <input type="hidden" name="from" value="customer">
-            <div><img src="{{ asset('themes/tailwind/images/HKSA-logo-1.png') }}" style="width: 271px;margin-bottom: 50px;" width="271" height="91"></div>
+            <div><img src="{{ asset('themes/tailwind/images/logo1.png') }}" style="width: 200px; margin-bottom: 5px;" width="200" height="200"></div>
             <div class="d-xl-flex" style="margin-top: 10px;height: 100%;">
                 <div style="width: 300px;height: 100%;">
                     <ul class="nav nav-tabs nav-fill" role="tablist" style="border-style: solid;">

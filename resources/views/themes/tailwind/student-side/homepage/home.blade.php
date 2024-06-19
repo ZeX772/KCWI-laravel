@@ -311,8 +311,6 @@
 
 @section('content')
 
-
-
 <div class="d-block" id="content-wrapper" style="padding: 50px;background: var(--app-color-tone-bg-color, #F1F2F9);position: relative; width: 100%;">
     <!-- News -->
     <div class="d-flex justify-content-between gap-3">
@@ -329,7 +327,7 @@
                 <div style="margin-left: 10px;">
                     <div class="SC-frame">
                         @if(isset($latestUrgentNews) && !empty($latestUrgentNews) && $latestUrgentNews['is_active'] === 1 && $latestUrgentNews['posting_time'] <= now())
-                            <p class="p18b" style="text-align: left; margin-top: 20px; margin-bottom: 5px;"><strong>{{ isset($latestUrgentNews['title']) ?$latestUrgentNews['title']:''; }}</strong></p>
+                            <p class="p18b" style="text-align: left; margin-top: 20px; margin-bottom: 5px;"><strong>{{ isset($latestUrgentNews['title']) ?$latestUrgentNews['title']:'' }}</strong></p>
                             <div class="p165" style="text-align: left;">{!! isset($latestUrgentNews) && $latestUrgentNews['content'] ? Illuminate\Support\Str::limit($latestUrgentNews['content'], 100, $end = '...') : '' !!}</div>
                         @else
                             <p class="p18b" style="text-align: left; margin-top: 20px;"><strong>No urgent news available</strong></p>

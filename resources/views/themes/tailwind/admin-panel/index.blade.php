@@ -15,7 +15,7 @@ if ($data && $data['logo'] !== '') {
                 style="text-align: center;padding: 0px;width: 50vw;">
                 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 500px;"
                     class="gap-5">
-                    <img src="{{ $logo }}" style="width: 300px;">
+                    <img src="{{ asset('themes/tailwind/images/logo1.png') }}" style="width: 300px;">
                     <h1 style="font-size: 72px; font-weight: 700;color: #4A5C7A;margin-top: 50px;">Welcome to Admin Panel
                     </h1>
                 </div>

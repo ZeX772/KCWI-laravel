@@ -190,85 +190,74 @@ $scheduleRoutes = [
         <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0" style="background: #FFF;padding: 20px !important; width: 295px; float: left; min-height: 100vh; z-index: 1; position: fixed;">
             <input type="hidden" id="selectedLanguage" value="{{ session('locale') }}">
             <div class="container-fluid d-flex flex-column p-0">
-                <div id="i18n-switch" style="margin-top: 20px;" class="switch-container">
-                    <div class="switch" style="background-image: url(&quot;https://unpkg.com/i18n-switch@2.0.0/assets/united-states.png&quot;);" name="switchLanguage" id="switchLanguage" data-value="">
-                    </div>
-                </div>
-                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#"><img src="{{ asset('themes/tailwind/images/HKSA-logo-1.png') }}" style="width: 200px;height: 67px; margin-top: 30px;" width="191" height="16"></a>
+                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#"><img src="{{ asset('themes/tailwind/images/logo1.png') }}" style="width: 150px;height: 150px; margin-top: 30px;" width="191" height="16"></a>
                 <ul class="navbar-nav text-light" id="accordionSidebar" style="margin-top: 20px;">
                     {{-- Homepage --}}
                     <li class="nav-item">
-                        <a class=" {{in_array($currentRoute, $homePageRoutes)?'active nav-link1':'nav-link'}} d-xl-flex align-items-xl-center" href="{{ route('wave.home') }}" style="height: 56px;width: 250px; text-decoration: none;">
-                            <img src="{{ asset('themes/tailwind/images/home.png') }}" style="width: 20px;margin-right: 20px;" class="{{in_array($currentRoute, $homePageRoutes)?'active-btn':''}}">
-                            <span class="fw-normal p16normal3" style="color: {{in_array($currentRoute, $homePageRoutes)?'#fff':'rgb(145,155,171)'}}">Home</span>
+                        <a class="{{ in_array($currentRoute, $homePageRoutes) ? 'active nav-link1' : 'nav-link' }} d-xl-flex align-items-xl-center" href="{{ route('wave.home') }}" style="height: 56px;width: 250px; text-decoration: none;">
+                            <img src="{{ asset('themes/tailwind/images/home.png') }}" style="width: 20px;margin-right: 20px;" class="{{ in_array($currentRoute, $homePageRoutes) ? 'active-btn' : '' }}">
+                            <span class="fw-normal p16normal3" style="color: {{ in_array($currentRoute, $homePageRoutes) ? '#fff' : 'rgb(145,155,171)' }}">Home</span>
                         </a>
                     </li>
                     @if(session('role') != 'coach')
                         {{-- Tutorials --}}
                         <li class="nav-item">
-                            <a class=" {{in_array($currentRoute, $tutorialRoutes)?'active nav-link1':'nav-link'}} d-xl-flex align-items-xl-center" href="{{ route('wave.tutorial') }}" style="height: 56px;width: 250px; text-decoration: none;">
-                                <img src="{{ asset('themes/tailwind/images/tutorial.png') }}" style="width: 20px;margin-right: 20px;" class="{{in_array($currentRoute, $tutorialRoutes)?'active-btn':''}}">
-                                <span class="fw-normal p16normal3" style="color: {{in_array($currentRoute, $tutorialRoutes)?'#fff':'rgb(145,155,171)'}}">Tutorial</span>
+                            <a class="{{ in_array($currentRoute, $tutorialRoutes) ? 'active nav-link1' : 'nav-link' }} d-xl-flex align-items-xl-center" href="{{ route('wave.tutorial') }}" style="height: 56px;width: 250px; text-decoration: none;">
+                                <img src="{{ asset('themes/tailwind/images/tutorial.png') }}" style="width: 20px;margin-right: 20px;" class="{{ in_array($currentRoute, $tutorialRoutes) ? 'active-btn' : '' }}">
+                                <span class="fw-normal p16normal3" style="color: {{ in_array($currentRoute, $tutorialRoutes) ? '#fff' : 'rgb(145,155,171)' }}">Tutorial</span>
                             </a>
                         </li>
-                        {{-- Student --}}
-                        @if(session('role') == 'guardian')
-                        {{-- @if(in_array($currentRoute, $studentRoutes)) --}}
-                        <li class="nav-item">
-                            <a class=" {{in_array($currentRoute, $studentRoutes)?'active nav-link1':'nav-link'}} d-xl-flex align-items-xl-center" href="{{ route('wave.student') }}" style="height: 56px;width: 250px; text-decoration: none;">
-                                <img src="{{ asset('themes/tailwind/images/student.png') }}" style="width: 20px;margin-right: 20px;" class="{{in_array($currentRoute, $studentRoutes)?'active-btn':''}}">
-                                <span class="fw-normal p16normal3" style="color: {{in_array($currentRoute, $studentRoutes)?'#fff':'rgb(145,155,171)'}};">Student</span>
-                            </a>
-                        </li>
-                        @endif
                         {{-- Enrollment --}}
                         <li class="nav-item">
-                            <a class=" {{in_array($currentRoute, $enrollRoutes)?'active nav-link1':'nav-link'}} d-xl-flex align-items-xl-center" href="{{ route('wave.enrollment') }}" style="height: 56px;width: 250px; text-decoration: none;">
-                                <img src="{{ asset('themes/tailwind/images/enrollment.png') }}" style="width: 20px;margin-right: 20px;" class="{{in_array($currentRoute, $enrollRoutes)?'active-btn':''}}">
-                                <span class="fw-normal p16normal3" style="color: {{in_array($currentRoute, $enrollRoutes)?'#fff':'rgb(145,155,171)'}};">Enrollment</span>
+                            <a class="{{ in_array($currentRoute, $enrollRoutes) ? 'active nav-link1' : 'nav-link' }} d-xl-flex align-items-xl-center" href="{{ route('wave.enrollment') }}" style="height: 56px;width: 250px; text-decoration: none;">
+                                <img src="{{ asset('themes/tailwind/images/enrollment.png') }}" style="width: 20px;margin-right: 20px;" class="{{ in_array($currentRoute, $enrollRoutes) ? 'active-btn' : '' }}">
+                                <span class="fw-normal p16normal3" style="color: {{ in_array($currentRoute, $enrollRoutes) ? '#fff' : 'rgb(145,155,171)' }}">Enrollment</span>
                             </a>
                         </li>
                         {{-- Account --}}
                         <li class="nav-item">
-                            <a class=" {{in_array($currentRoute, $accountRoutes)?'active nav-link1':'nav-link'}} d-xl-flex align-items-xl-center" href="{{ route('wave.account') }}" style="height: 56px;width: 250px; text-decoration: none;">
-                                <img src="{{ asset('themes/tailwind/images/account.png') }}" style="width: 20px;margin-right: 20px;" class="{{in_array($currentRoute, $accountRoutes)?'active-btn':''}}">
-                                <span class="fw-normal p16normal3" style="color: {{in_array($currentRoute, $accountRoutes)?'#fff':'rgb(145,155,171)'}};">Account</span>
+                            <a class="{{ in_array($currentRoute, $accountRoutes) ? 'active nav-link1' : 'nav-link' }} d-xl-flex align-items-xl-center" href="{{ route('wave.account') }}" style="height: 56px;width: 250px; text-decoration: none;">
+                                <img src="{{ asset('themes/tailwind/images/account.png') }}" style="width: 20px;margin-right: 20px;" class="{{ in_array($currentRoute, $accountRoutes) ? 'active-btn' : '' }}">
+                                <span class="fw-normal p16normal3" style="color: {{ in_array($currentRoute, $accountRoutes) ? '#fff' : 'rgb(145,155,171)' }}">Account</span>
                             </a>
                         </li>
                         {{-- Shopping --}}
                         <li class="nav-item">
-                            <a class=" {{in_array($currentRoute, $shoppingRoutes)?'active nav-link1':'nav-link'}} d-xl-flex align-items-xl-center" href="{{ route('wave.shopping') }}" style="height: 56px;width: 250px; text-decoration: none;">
-                                <img src="{{ asset('themes/tailwind/images/shopping.png') }}" style="width: 20px;margin-right: 20px;" class="{{in_array($currentRoute, $shoppingRoutes)?'active-btn':''}}">
-                                <span class="fw-normal p16normal3" style="color: {{in_array($currentRoute, $shoppingRoutes)?'#fff':'rgb(145,155,171)'}};">Shopping</span>
+                            <a class="{{ in_array($currentRoute, $shoppingRoutes) ? 'active nav-link1' : 'nav-link' }} d-xl-flex align-items-xl-center" href="{{ route('wave.shopping') }}" style="height: 56px;width: 250px; text-decoration: none;">
+                                <img src="{{ asset('themes/tailwind/images/shopping.png') }}" style="width: 20px;margin-right: 20px;" class="{{ in_array($currentRoute, $shoppingRoutes) ? 'active-btn' : '' }}">
+                                <span class="fw-normal p16normal3" style="color: {{ in_array($currentRoute, $shoppingRoutes) ? '#fff' : 'rgb(145,155,171)' }}">Shopping</span>
                             </a>
                         </li>
                         {{-- Notification --}}
                         <li class="nav-item">
-                            <a class=" {{in_array($currentRoute, $notificationRoutes)?'active nav-link1':'nav-link'}} d-xl-flex align-items-xl-center" href="{{ route('wave.notification') }}" style="height: 56px;width: 250px; text-decoration: none;">
-                                <img src="{{ asset('themes/tailwind/images/notification.png') }}" style="width: 20px;margin-right: 20px;" class="{{in_array($currentRoute, $notificationRoutes)?'active-btn':''}}">
-                                <span class="fw-normal p16normal3" style="color: {{in_array($currentRoute, $notificationRoutes)?'#fff':'rgb(145,155,171)'}};">Notification</span>
+                            <a class="{{ in_array($currentRoute, $notificationRoutes) ? 'active nav-link1' : 'nav-link' }} d-xl-flex align-items-xl-center" href="{{ route('wave.notification') }}" style="height: 56px;width: 250px; text-decoration: none;">
+                                <img src="{{ asset('themes/tailwind/images/notification.png') }}" style="width: 20px;margin-right: 20px;" class="{{ in_array($currentRoute, $notificationRoutes) ? 'active-btn' : '' }}">
+                                <span class="fw-normal p16normal3" style="color: {{ in_array($currentRoute, $notificationRoutes) ? '#fff' : 'rgb(145,155,171)' }}">Notification</span>
                             </a>
                         </li>
                     @else
                         {{-- Schedule --}}
                         <li class="nav-item">
-                            <a class=" {{in_array($currentRoute, $scheduleRoutes)?'active nav-link1':'nav-link'}} d-xl-flex align-items-xl-center" href="{{ route('wave.schedule') }}" style="height: 56px;width: 250px; text-decoration: none;">
-                                <img src="{{ asset('themes/tailwind/images/clipboard-image-4.png') }}" style="width: 20px;margin-right: 20px;" class="{{in_array($currentRoute, $scheduleRoutes)?'active-btn':''}}">
-                                <span class="fw-normal p16normal3" style="color: {{in_array($currentRoute, $scheduleRoutes)?'#fff':'rgb(145,155,171)'}}">Schedule</span>
+                            <a class="{{ in_array($currentRoute, $scheduleRoutes) ? 'active nav-link1' : 'nav-link' }} d-xl-flex align-items-xl-center" href="{{ route('wave.schedule') }}" style="height: 56px;width: 250px; text-decoration: none;">
+                                <img src="{{ asset('themes/tailwind/images/clipboard-image-4.png') }}" style="width: 20px;margin-right: 20px;" class="{{ in_array($currentRoute, $scheduleRoutes) ? 'active-btn' : '' }}">
+                                <span class="fw-normal p16normal3" style="color: {{ in_array($currentRoute, $scheduleRoutes) ? '#fff' : 'rgb(145,155,171)' }}">Schedule</span>
                             </a>
                         </li>
-
                         {{-- Account --}}
                         <li class="nav-item">
-                            <a class=" {{in_array($currentRoute, $accountRoutes)?'active nav-link1':'nav-link'}} d-xl-flex align-items-xl-center" href="{{ route('wave.account') }}" style="height: 56px;width: 250px; text-decoration: none;">
-                                <img src="{{ asset('themes/tailwind/images/account.png') }}" style="width: 20px;margin-right: 20px;" class="{{in_array($currentRoute, $accountRoutes)?'active-btn':''}}">
-                                <span class="fw-normal p16normal3" style="color: {{in_array($currentRoute, $accountRoutes)?'#fff':'rgb(145,155,171)'}};">Account</span>
+                            <a class="{{ in_array($currentRoute, $accountRoutes) ? 'active nav-link1' : 'nav-link' }} d-xl-flex align-items-xl-center" href="{{ route('wave.account') }}" style="height: 56px;width: 250px; text-decoration: none;">
+                                <img src="{{ asset('themes/tailwind/images/account.png') }}" style="width: 20px;margin-right: 20px;" class="{{ in_array($currentRoute, $accountRoutes) ? 'active-btn' : '' }}">
+                                <span class="fw-normal p16normal3" style="color: {{ in_array($currentRoute, $accountRoutes) ? '#fff' : 'rgb(145,155,171)' }}">Account</span>
                             </a>
                         </li>
                     @endif
                 </ul>
+                <a href="{{ route('logout') }}" style="text-decoration:none;color:#171433;">
+                    <img src="{{ asset('/themes/tailwind/images/logoutlogo.png') }}" style="position: fixed; bottom: 0; left: 0">
+                </a>
             </div>
         </nav>
+
 
         @yield('content')
     </div>
