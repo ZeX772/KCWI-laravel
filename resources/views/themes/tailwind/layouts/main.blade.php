@@ -17,9 +17,9 @@ $routeName = Route::currentRouteName();
     @endif -->
 
     @if( null !== session('school') )
-        <title><?= session('school')['name'] != "" ? session('school')['name'] : 'Hong Kong Swimming Academy' ?></title>
+        <title><?= session('school')['name'] != "" ? session('school')['name'] : 'BlitzWiZ Gym' ?></title>
     @else
-        <title>HKSA | Hong Kong Swimming Academy</title>
+        <title>BlitzWiZ Gym</title>
     @endif
 
     <meta charset="utf-8">
