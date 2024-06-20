@@ -92,6 +92,32 @@
             margin-left: 295px; 
             width: calc(100% - 295px) !important;
         }
+        .avatar-dropdown {
+		width: 300px;
+		height: auto;
+		background-color: #FFFFFF;
+		right: 18px;
+		border-radius: 8px;
+		padding: 10px;
+		box-shadow: 0px 4px 4px 0px #00000040;
+		z-index: 999;
+	}
+
+	.notifications-dropdown {
+		width: 300px;
+		height: auto;
+		background-color: #FFFFFF;
+		right: 100px;
+		border-radius: 8px;
+		padding: 10px;
+		box-shadow: 0px 4px 4px 0px #00000040;
+		z-index: 999;
+	}
+
+	.user-info,
+	.logout-section {
+		padding: 10px 20px 10px 20px;
+	}
     </style>
     @yield('style')
     <base href="https://mozilla.github.io">
@@ -197,6 +223,35 @@ $scheduleRoutes = [
             <input type="hidden" id="selectedLanguage" value="{{ session('locale') }}">
             <div class="container-fluid d-flex flex-column p-0">
                 <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#"><img src="{{ asset('themes/tailwind/images/logo1.png') }}" style="width: 150px;height: 150px; margin-top: 30px;" width="191" height="16"></a>
+                <div class="main-buttons relative">
+                    <ul>
+                        <div class="d-none d-sm-block topbar-divider"></div>
+                        <li class="has-dropdown">
+                            <div id="dropdown-menu-btn" class="cursor-pointer">
+                                <img src="{{ asset('/themes/tailwind/images/clipboard-image-16.png')}}" style="width: 48px;">
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="absolute avatar-dropdown d-none">
+                        <div class="d-flex align-items-center gap-2 border-bottom user-info">
+                            <div>
+                                <img src="{{ asset('/themes/tailwind/images/clipboard-image-16.png')}}" style="width: 48px;">
+                            </div>
+                            <div>
+                                <div>{{ isset($response['name']) && $response['name'] != '' ?$response['name']:'' }}</div>
+                            </div>
+                        </div>
+                        <div class="logout-section">
+                            <div class="">
+                                <a href="{{ route('logout') }}" class="d-flex align-items-center gap-2"><x-svg-icon icon="logout" />Logout</a>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="absolute notifications-dropdown d-none">
+                        
+                    </div>
+                </div>
                 <ul class="navbar-nav text-light" id="accordionSidebar" style="margin-top: 20px;">
                     {{-- Homepage --}}
                     <li class="nav-item">
@@ -258,9 +313,6 @@ $scheduleRoutes = [
                         </li>
                     @endif
                 </ul>
-                <a href="{{ route('logout') }}" style="text-decoration:none;color:#171433;">
-                    <img src="{{ asset('/themes/tailwind/images/logoutlogo.png') }}" style="position: fixed; bottom: 0; left: 0">
-                </a>
             </div>
         </nav>
 
@@ -310,6 +362,17 @@ $scheduleRoutes = [
 
             return response;
         }
+    </script>
+    <script type="text/javascript">
+        $(function() {
+            $('#dropdown-menu-btn').on('click', function(){
+                $('.avatar-dropdown').toggleClass('d-none');
+            });
+    
+            $('#notification-dropdown-btn').on('click', function() {
+                $('.notifications-dropdown').toggleClass('d-none');
+            });
+        });
     </script>
     @yield('javascript')
 </body>

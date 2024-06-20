@@ -64,39 +64,33 @@
                 <li class="nav-item" role="presentation">
                     <a class="nav-link2 active text" role="tab" data-bs-toggle="tab" href="#tab-1" style="text-decoration: none; background-color: transparent;">Class</a>
                 </li>
-                <li class="nav-item" role="presentation" style="margin-left: 20px;">
-                    <a class="nav-link2 text" role="tab" data-bs-toggle="tab" href="#tab-2" style="text-decoration: none; background-color: transparent;">Competition</a>
-                </li>
             </ul>
             <div class="tab-content">
                 <div class="tab-pane active" role="tabpanel" id="tab-1">
                     <div style="margin-bottom: 20px;">
                         <div id="option1" class="d-flex d-xxl-flex justify-content-start align-items-xxl-center button3 text-nowrap container" type="button" style="margin-bottom: 10px;" onclick="window.location.href='{{ route('wave.fulltermenrollment') }}'">
-                            <img src="{{ asset('/themes/tailwind/images/penlogo-enrollment.png') }}" style="width: 100px;" class="image" data-original-src="{{ asset('/themes/tailwind/images/penlogo-enrollment.png') }}"><strong>Full
-                                Term Enrollment</strong><span class="d-xxl-flex justify-content-xxl-end" style="width: 100%;text-align: right;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-96 0 512 512" width="1em" height="1em" fill="currentColor" class="d-xxl-flex">
+                            <img src="{{ asset('/themes/tailwind/images/penlogo-enrollment.png') }}" style="width: 100px;" class="image" data-original-src="{{ asset('/themes/tailwind/images/penlogo-enrollment.png') }}"><strong>Muscle Building</strong><span class="d-xxl-flex justify-content-xxl-end" style="width: 100%;text-align: right;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-96 0 512 512" width="1em" height="1em" fill="currentColor" class="d-xxl-flex">
                                     <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
                                     <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
                                     </path>
                                 </svg></span>
                         </div>
                         <div id="option2" class="d-flex d-xxl-flex justify-content-start align-items-xxl-center button3 text-nowrap container" type="button" style="margin-bottom: 10px;" onclick="window.location.href='{{ route('wave.flexiblecourse') }}'">
-                            <img src="{{ asset('/themes/tailwind/images/penlogo-enrollment.png') }}" style="width: 100px;" class="image" data-original-src="{{ asset('/themes/tailwind/images/penlogo-enrollment.png') }}"><strong>Flexible
-                                Course Enrollment</strong><span class="d-xxl-flex justify-content-xxl-end" style="width: 100%;text-align: right;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-96 0 512 512" width="1em" height="1em" fill="currentColor" class="d-xxl-flex">
+                            <img src="{{ asset('/themes/tailwind/images/penlogo-enrollment.png') }}" style="width: 100px;" class="image" data-original-src="{{ asset('/themes/tailwind/images/penlogo-enrollment.png') }}"><strong>Rehab</strong><span class="d-xxl-flex justify-content-xxl-end" style="width: 100%;text-align: right;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-96 0 512 512" width="1em" height="1em" fill="currentColor" class="d-xxl-flex">
                                     <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
                                     <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
                                     </path>
                                 </svg></span>
                         </div>
 
-                        {{-- Hide First For Private Course (Note: Maybe For Future Development)
+                        {{-- Hide First For Private Course (Note: Maybe For Future Development) --}}
                         <div id="option3" class="d-flex d-xxl-flex justify-content-start align-items-xxl-center button3 text-nowrap container" type="button" style="margin-bottom: 10px;" onclick="window.location.href='{{ route('wave.privatecourse') }}'">
-                            <img src="{{ asset('/themes/tailwind/images/penlogo-enrollment.png') }}" style="width: 100px;" class="image" data-original-src="{{ asset('/themes/tailwind/images/penlogo-enrollment.png') }}"><strong>Private
-                                Course Enrollment</strong><span class="d-xxl-flex justify-content-xxl-end" style="width: 100%;text-align: right;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-96 0 512 512" width="1em" height="1em" fill="currentColor" class="d-xxl-flex">
+                            <img src="{{ asset('/themes/tailwind/images/penlogo-enrollment.png') }}" style="width: 100px;" class="image" data-original-src="{{ asset('/themes/tailwind/images/penlogo-enrollment.png') }}"><strong>Sport Performance</strong><span class="d-xxl-flex justify-content-xxl-end" style="width: 100%;text-align: right;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-96 0 512 512" width="1em" height="1em" fill="currentColor" class="d-xxl-flex">
                                     <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
                                     <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
                                     </path>
                                 </svg></span>
-                        </div> --}}
+                        </div> 
                         
                         <div id="option4" class="d-flex d-xxl-flex justify-content-start align-items-xxl-center button3 text-nowrap container" type="button" style="margin-bottom: 10px;" onclick="window.location.href='{{ route('wave.changecourse') }}'">
                             <img src="{{ asset('/themes/tailwind/images/noteslogo-enrollment.png') }}" style="width: 100px;" class="image" data-original-src="{{ asset('/themes/tailwind/images/noteslogo-enrollment.png') }}"><strong>Change
@@ -124,39 +118,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane" role="tabpanel" id="tab-2">
-                    <div style="margin-bottom: 20px;">
-                        <div id="option7" class="d-flex d-xxl-flex justify-content-start align-items-xxl-center button3 text-nowrap container" type="button" style="margin-bottom: 10px;width: 100%; text-decoration: none;" onclick="window.location.href='{{ route('wave.competitionenrollment') }}'"><img src="{{ asset('/themes/tailwind/images/penlogo-enrollment.png') }}" style="width: 100px;" class="image" data-original-src="{{ asset('/themes/tailwind/images/penlogo-enrollment.png') }}"><strong>Competition</strong><span class="d-xxl-flex justify-content-xxl-end" style="width: 100%;text-align: right;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-96 0 512 512" width="1em" height="1em" fill="currentColor" class="d-xxl-flex">
-                                    <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
-                                    <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
-                                    </path>
-                                </svg></span></div>
-                        <div id="option8" class="d-flex d-xxl-flex justify-content-start align-items-xxl-center button3 text-nowrap container" type="button" style="margin-bottom: 10px;width: 100%;" onclick="window.location.href='{{ route('wave.cancelcompetition') }}'"><img src="{{ asset('/themes/tailwind/images/noteslogo-enrollment.png') }}" style="width: 100px;" class="image" data-original-src="{{ asset('/themes/tailwind/images/noteslogo-enrollment.png') }}"><strong>Cancel
-                                Competition</strong><span class="d-xxl-flex justify-content-xxl-end" style="width: 100%;text-align: right;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-96 0 512 512" width="1em" height="1em" fill="currentColor" class="d-xxl-flex">
-                                    <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
-                                    <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
-                                    </path>
-                                </svg></span></div>
-                                <div id="option9" class="d-flex d-xxl-flex justify-content-start align-items-xxl-center button3 text-nowrap container" type="button" style="margin-bottom: 10px;width: 100%;" onclick="window.location.href='{{ route('wave.competitionHistory') }}'"><img src="{{ asset('/themes/tailwind/images/noteslogo-enrollment.png') }}" style="width: 100px;" class="image" data-original-src="{{ asset('/themes/tailwind/images/noteslogo-enrollment.png') }}">
-                                    <strong>Competition Enrollment History</strong><span class="d-xxl-flex justify-content-xxl-end" style="width: 100%;text-align: right;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-96 0 512 512" width="1em" height="1em" fill="currentColor" class="d-xxl-flex">
-                                        <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
-                                        <path d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z">
-                                        </path>
-                                    </svg></span></div>
-                        <div style="margin-top: 50px;">
-                            <p class="p22bold"><img src="{{ asset('themes/tailwind/images/clipboard-image-55.png') }}" style="width: 37px;margin-right: 10px;"><strong>Note</strong></p>
-                            <ul class="p18b" style="text-align: left;">
-                                <li><strong>Competition time will ONLY be granted for clients with confirmed
-                                        payment (7 days prior to lesson). Admittance will not be granted without
-                                        payment slip. Please note that seat will be withdrawn by the system
-                                        automatically if payment has not been settled on or before the due
-                                        date.</strong><br><strong>For new enrolled students, please send us the
-                                        signed enrollment form with terms and conditions along with payment
-                                        slip.</strong></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+              
             </div>
         </div>
     </div>
