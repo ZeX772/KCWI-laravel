@@ -37,6 +37,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
+        .nav-link:hover {
+            background-color: #f1f2f9; /* Change this to your desired hover background color */
+            color: #000; /* Change this to your desired hover text color */
+            left: 0;
+        }
+        
         .nav-link1 {
             background: var(--appcolortone-secondary-1, #233656);
             border-radius: 8px;

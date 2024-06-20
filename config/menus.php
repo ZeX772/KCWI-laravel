@@ -51,30 +51,6 @@ return [
             'icon' => 'themes/tailwind/images/clipboard-image-3.png',
             'is_subitem' => false
         ],
-        // * LEVEL
-        [
-            'route_names' => [
-                'wave.user.admin-main.level',
-            ],
-            'route' => 'wave.user.admin-main.level',
-            'has_badge' => false,
-            'name' => 'level',
-            'label' => 'Level',
-            'icon' => 'themes/tailwind/images/clipboard-image-4.png',
-            'is_subitem' => false
-        ],
-        // * VENUE
-        [
-            'route_names' => [
-                'wave.user.admin-main.venue',
-            ],
-            'route' => 'wave.user.admin-main.venue',
-            'has_badge' => false,
-            'name' => 'venue',
-            'label' => 'Venue',
-            'icon' => 'themes/tailwind/images/clipboard-image-5.png',
-            'is_subitem' => false
-        ],
         // * CLASSES
         [
             'route_names' => [
@@ -85,30 +61,6 @@ return [
             'name' => 'classes',
             'label' => 'Classes',
             'icon' => 'themes/tailwind/images/clipboard-image-19.png',
-            'is_subitem' => false
-        ],
-        // * QR SCANNER
-        [
-            'route_names' => [
-                'wave.user.admin-main.qr-scanner',
-            ],
-            'route' => 'wave.user.admin-main.qr-scanner',
-            'has_badge' => false,
-            'name' => 'qr_scanner',
-            'label' => 'QR Scanner',
-            'icon' => 'themes/tailwind/images/QR.png',
-            'is_subitem' => false
-        ],
-        // * COMPETITION
-        [
-            'route_names' => [
-                'wave.user.admin-main.competition',
-            ],
-            'route' => 'wave.user.admin-main.competition',
-            'has_badge' => false,
-            'name' => 'competition',
-            'label' => 'Competition',
-            'icon' => 'themes/tailwind/images/clipboard-image-6.png',
             'is_subitem' => false
         ],
         // * COACH
@@ -169,18 +121,6 @@ return [
             'icon' => 'themes/tailwind/images/clipboard-image-9.png',
             'is_subitem' => false
         ],
-        // * ACCOUNTING
-        [
-            'route_names' => [
-                'wave.user.admin-main.accounting',
-            ],
-            'route' => 'wave.user.admin-main.accounting',
-            'has_badge' => false,
-            'name' => 'accounting',
-            'label' => 'Accounting',
-            'icon' => 'themes/tailwind/images/clipboard-image-10.png',
-            'is_subitem' => false
-        ],
         // * PAYROLL
         [
             'route_names' => [
@@ -217,11 +157,6 @@ return [
                     'name' => 'receipt',
                     'label' => 'Receipts'
                 ],
-                [
-                    'route' => 'wave.user.admin-main.consolidate',
-                    'name' => 'consolidate',
-                    'label' => 'Consolidates'
-                ]
             ]
         ],
         // * REPORT
@@ -260,11 +195,6 @@ return [
             'icon' => 'themes/tailwind/images/clipboard-image-11.png',
             'is_subitem' => true,
             'subitems' => [
-                [
-                    'route' => 'wave.user.admin-main.setting-web-app',
-                    'name' => 'web_app',
-                    'label' => 'Web/App'
-                ],
                 [
                     'route' => 'wave.user.admin-main.content-placevideo',
                     'name' => 'place_video',
@@ -324,21 +254,21 @@ return [
                     'name' => 'staff',
                     'label' => 'Staff'
                 ],
-                [
-                    'route' => 'wave.user.admin-main.setting',
-                    'name' => 'school',
-                    'label' => 'School'
-                ],
+                // [
+                //     'route' => 'wave.user.admin-main.setting',
+                //     'name' => 'school',
+                //     'label' => 'School'
+                // ],
                 [
                     'route' => 'wave.user.admin-main.setting-closure',
                     'name' => 'closure',
                     'label' => 'Closure'
                 ],
-                [
-                    'route' => 'wave.user.admin-main.setting-banklist',
-                    'name' => 'bank_list',
-                    'label' => 'Bank List'
-                ],
+                // [
+                //     'route' => 'wave.user.admin-main.setting-banklist',
+                //     'name' => 'bank_list',
+                //     'label' => 'Bank List'
+                // ],
                 [
                     'route' => 'wave.user.admin-main.faq',
                     'name' => 'faq',
