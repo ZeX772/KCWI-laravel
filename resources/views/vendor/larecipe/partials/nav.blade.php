@@ -4,7 +4,7 @@
     <nav class="flex items-center justify-between text-black bg-navbar shadow-xs h-16">
         <div class="flex items-center flex-no-shrink">
             <a href="{{ url('/') }}" class="flex items-center flex-no-shrink text-black mx-4 h-8 block">
-                <img src="/wave/img/logo.png" alt="Wave logo" class="h-full w-auto">
+                <img src="/wave/img/logo.png" alt="Gym logo" class="h-full w-auto">
             </a>
 
             <div class="switch">

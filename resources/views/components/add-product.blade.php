@@ -10,7 +10,7 @@
                         label="Product Name" 
                         type="text" 
                         name="name"
-                        placeholder="Ticket - Girls 400m Freestyle"
+                        placeholder="Protein Powder"
                         id="name"
                         isRequired="true"
                     />

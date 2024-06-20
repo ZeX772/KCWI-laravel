@@ -214,9 +214,9 @@
             </path>
         </svg>
     </div> --}}
-    <div class="banner-image d-md-flex d-xl-flex d-xxl-flex justify-content-md-end justify-content-xl-end justify-content-xxl-end" style="background: url('{{ asset('themes/tailwind/images/Bridge_Athletic_Swim_by_Mike_Lewis-16.jpg') }}') top / cover no-repeat;height: 324px;">
+    <div class="banner-image d-md-flex d-xl-flex d-xxl-flex justify-content-md-end justify-content-xl-end justify-content-xxl-end" style="background: url('{{ asset('themes/tailwind/images/equipment.jpg') }}') top / cover no-repeat;height: 324px;">
         <div class="rectangle d-md-flex d-lg-flex d-xl-flex flex-column justify-content-md-center justify-content-lg-center justify-content-xl-center align-items-xl-start backdrop" style="width: 35%;height: auto;padding: 20px;">
-            <p class="p40">HKSA Swimming<br>Competition-2023</p>
+            <p class="p40">BlitzWiZ Gym</p>
             {{-- <a href="{{ route('wave.ticket1') }}" style="text-decoration: none;"><button class="button1" type="button" style="width: 97.281px;height: 33px;border: none;white-space: nowrap;">Buy
                     Ticket</button></a> --}}
         </div>
@@ -260,6 +260,7 @@
         <div class="row row-cols-2">
             @foreach ($shoppingProducts as $shoppingProduct)
             <div class="col-6 col-sm-3 divcard">
+                @dd($shoppingProducts)
                 {{-- @dd($shoppingProducts); --}}
                 <a href="{{ route('wave.item', ['id' => $shoppingProduct['id']]) }}" style="text-decoration: none;color:black;">
                     <input type="hidden" name="product_id" value="{{ $shoppingProduct['id'] }}">

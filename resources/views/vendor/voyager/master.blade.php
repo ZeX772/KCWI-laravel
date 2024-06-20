@@ -13,7 +13,7 @@ $routeName = Route::currentRouteName();
     @if(isset($seo->title))
         <title>{{ $seo->title }}</title>
     @else
-        <title>{{ setting('site.title', 'HKSA') . ' - ' . setting('site.description', 'Hong Kong Swimming Association') }}</title>
+        <title>{{ setting('site.title', 'BlitzWiz') . ' - ' . setting('site.description', 'BlitzWiz') }}</title>
     @endif
 
     <meta charset="utf-8">

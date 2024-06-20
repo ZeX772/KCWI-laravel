@@ -572,8 +572,8 @@
                 }
 
                 if( element.field_name == 'droparea' ) {
-                    $('.add-product-container #product-form .drop-area').attr('style', 'border: 2px dashed #eb1e1e;');
-                    $('.add-product-container #product-form .drop-area').after(`<p class="text-danger" style="position: absolute; font-size: 12px;">${element.message}</p>`);
+                    $('.-container #product-form .drop-area').attr('style', 'border: 2px dashed #eb1e1e;');
+                    $('.-container #product-form .drop-area').after(`<p class="text-danger" style="position: absolute; font-size: 12px;">${element.message}</p>`);
                 }
             });
         }
