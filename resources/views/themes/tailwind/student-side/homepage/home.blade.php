@@ -733,7 +733,7 @@
                             @foreach ($levels as $level)
                                 <div class="d-inline-flex flex-column align-items-xxl-center gap-2">
                                     <a href="{{ route('wave.levellists', ['id' => $level['id']]) }}">
-                                        <img src="{{ isset($level) && $level['banner'] != '' ?$level['banner']: 'https://rma-zone.b-cdn.net/hksa/level-icon/default-level-icon.png'; }}" style="width: 99px; min-height: 95px; border-radius: 26px; object-fit: cover;">
+                                        {{-- <img src="{{ isset($level) && $level['banner'] != '' ?$level['banner']: 'https://rma-zone.b-cdn.net/hksa/level-icon/default-level-icon.png'; }}" style="width: 99px; min-height: 95px; border-radius: 26px; object-fit: cover;"> --}}
                                     </a>
                                     <p class="text-nowrap p14b" style="margin-bottom: 0px; font-size: 14px; font-weight: 600;">
                                         {{ strlen($level['name']) > 13 ? substr($level['name'], 0, 13) . '...' : $level['name'] }}
