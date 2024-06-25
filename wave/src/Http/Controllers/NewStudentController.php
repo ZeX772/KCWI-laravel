@@ -89,7 +89,7 @@ class NewStudentController extends Controller
         $requestData = [
             'school_id' => $request->input('school_id'),
             'grade_of_class' => $request->input('grade_of_class'),
-            'hear_about_us' => $request->input('hksa_source'),
+            'hear_about_us' => $request->input('kcwi_source'),
             'referral_by' => $request->input('referral_by'),
         ];
         ////Optional Checking

@@ -12,15 +12,6 @@
                 </div>
                 <div class="col-xl-2">
                     <div class="d-xl-flex justify-content-xl-center align-items-xl-center">
-                        <div class="col-auto align-self-center"><img src="{{ asset('themes/tailwind/images/clipboard-image-21.png') }}" style="width: 48px;"></div>
-                        <div class="col-auto d-xl-flex flex-column" style="margin-left: 12px;">
-                            <h1 style="color: #7A7A7A;font-size: 14px;font-family: Poppins, sans-serif;">Venue</h1>
-                            <h1 style="color: #3B3B3B;font-size: 25px;font-family: Poppins, sans-serif;font-weight: bold;">{{ optional($entries['total_counts'])['venue'] }}</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-2">
-                    <div class="d-xl-flex justify-content-xl-center align-items-xl-center">
                         <div class="col-auto align-self-center"><img src="{{ asset('themes/tailwind/images/clipboard-image-22.png') }}" style="width: 48px;"></div>
                         <div class="col-auto d-xl-flex flex-column" style="margin-left: 12px;">
                             <h1 style="color: #7A7A7A;font-size: 14px;font-family: Poppins, sans-serif;">Coachs</h1>
@@ -32,17 +23,8 @@
                     <div class="d-xl-flex justify-content-xl-center align-items-xl-center">
                         <div class="col-auto align-self-center"><img src="{{ asset('themes/tailwind/images/clipboard-image-23.png') }}" style="width: 48px;"></div>
                         <div class="col-auto d-xl-flex flex-column" style="margin-left: 12px;">
-                            <h1 style="color: #7A7A7A;font-size: 14px;font-family: Poppins, sans-serif;">Students</h1>
+                            <h1 style="color: #7A7A7A;font-size: 14px;font-family: Poppins, sans-serif;">Members</h1>
                             <h1 style="color: #3B3B3B;font-size: 25px;font-family: Poppins, sans-serif;font-weight: bold;">{{ optional($entries['total_counts'])['students'] }}</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-2">
-                    <div class="d-xl-flex justify-content-xl-center align-items-xl-center">
-                        <div class="col-auto align-self-center"><img src="{{ asset('themes/tailwind/images/clipboard-image-24.png') }}" style="width: 48px;"></div>
-                        <div class="col-auto d-xl-flex flex-column" style="margin-left: 12px;">
-                            <h1 style="color: #7A7A7A;font-size: 14px;font-family: Poppins, sans-serif;">Parents</h1>
-                            <h1 style="color: #3B3B3B;font-size: 25px;font-family: Poppins, sans-serif;font-weight: bold;">{{ optional($entries['total_counts'])['parents'] }}</h1>
                         </div>
                     </div>
                 </div>
@@ -75,9 +57,6 @@
                                                 <a class="nav-link" role="tab" data-bs-toggle="tab" href="#tab-2" style="border-style: none;border-left-style: none;">Enrollment [{{ count($entries['enrollments']) }}]</a>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <a class="nav-link" role="tab" data-bs-toggle="tab" href="#tab-3" style="border-style: none;border-left-style: none;">Makeup [{{ count($entries['make_ups']) }}]</a>
-                                            </li>
-                                            <li class="nav-item" role="presentation">
                                                 <a class="nav-link" role="tab" data-bs-toggle="tab" href="#tab-4" style="border-style: none;border-left-style: none;">Course [{{ count($entries['courses']) }}]</a>
                                             </li>
                                             <li class="nav-item" role="presentation">
@@ -92,7 +71,7 @@
                                                     <thead>
                                                         <tr>
                                                             <th class="fw-bold" style="font-size: 14px;color: #7A7A7A;">ACTIVITY</th>
-                                                            <th style="font-size: 14px;color: #7A7A7A;">STUDENT</th>
+                                                            <th style="font-size: 14px;color: #7A7A7A;">MEMBER</th>
                                                             <th style="font-size: 14px;color: #7A7A7A;">STATUS</th>
                                                             <th style="font-size: 14px;color: #7A7A7A;">DATE</th>
                                                             <th style="font-size: 14px;color: #7A7A7A;"></th>

@@ -88,7 +88,7 @@
                 <a href="{{ $notificationsDetails['attachment'] }}" target="_blank">
                     <img src="{{ asset('/themes/tailwind/images/attachmentlogo.png') }}" style="width: 35px;margin-left:35px;">
                     @php
-                    $attachmentName = str_replace('https://rma-zone.b-cdn.net/hksa/notification-attachment/', '', $notificationsDetails['attachment']);
+                    $attachmentName = str_replace('https://kcwi-storage.b-cdn.net/kcwi/notification-attachment/', '', $notificationsDetails['attachment']);
                     @endphp
                     <p class="p14b" style="margin-top:20px;">{{ substr( $attachmentName, 0, 15) . '...'}}</p>
                 </a>

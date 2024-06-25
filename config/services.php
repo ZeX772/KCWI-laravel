@@ -35,9 +35,9 @@ return [
         'secret' => env('SPARKPOST_SECRET'),
     ],
 
-    'api_url' => env('API_URL', 'https://hksa-api.local/api'),
+    'api_url' => env('API_URL', 'https://kcwi-api.local/api'),
 
-    'app_url' => env('APP_URL', 'http://hksa-laravel.local'),
+    'app_url' => env('APP_URL', 'http://kcwi-laravel.local'),
     
     'api' => [
         'url1' => env('API_URL'),

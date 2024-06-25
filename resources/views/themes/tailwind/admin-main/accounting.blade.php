@@ -889,7 +889,7 @@
         // Print event
         $('#accounting-table').on('click', '.print-btn', function(e){
             const pdfUrl = $(this).data('pdf_url');
-            // printPDF(`http://hksa-api.local/storage/course-enrollment-payment-attachments/INV_000001.pdf`);
+            // printPDF(`http://kcwi-api.local/storage/course-enrollment-payment-attachments/INV_000001.pdf`);
             printPDF(pdfUrl);
         });
 
