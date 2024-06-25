@@ -26,7 +26,7 @@ return [
             'icon' => 'themes/tailwind/images/clipboard-image-1.png',
             'is_subitem' => false
         ],
-        // * STUDENT
+        // * MEMBER
         [
             'route_names' => [
                 'wave.user.admin-main.student',
@@ -35,7 +35,7 @@ return [
             'route' => 'wave.user.admin-main.student',
             'has_badge' => false,
             'name' => 'student',
-            'label' => 'Student',
+            'label' => 'Member',
             'icon' => 'themes/tailwind/images/clipboard-image-2.png',
             'is_subitem' => false
         ],
