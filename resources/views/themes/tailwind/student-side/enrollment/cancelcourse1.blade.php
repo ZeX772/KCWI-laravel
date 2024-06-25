@@ -130,7 +130,7 @@
                             <p class="p22bold"><img src="{{ asset('themes/tailwind/images/clipboard-image-55.png') }}"
                                     style="width: 37px;margin-right: 10px;"><strong>Note</strong></p>
                             <ul class="p18b" style="text-align: left;">
-                                <li><strong>Parents should notify HKSA at 2295 6066 or email to
+                                <li><strong>Parents should notify kcwi at 2295 6066 or email to
                                         knock@hkswimmingacademy.com</strong></li>
                             </ul>
                         </div>

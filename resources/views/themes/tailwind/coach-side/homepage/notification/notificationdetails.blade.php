@@ -91,7 +91,7 @@
                 style="background: #FFF;padding: 20px; height: 100vh;">
                 <div class="container-fluid d-flex flex-column p-0"><a
                         class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0"
-                        href="#"><img src="{{ asset('themes/tailwind/images/HKSA-logo-1.png') }}"
+                        href="#"><img src="{{ asset('themes/tailwind/images/kcwi-logo-1.png') }}"
                             style="width: 200px;height: 67px; margin-top: 60px;" width="191" height="16"></a>
                     <ul class="navbar-nav text-light" id="accordionSidebar" style="margin-top: 20px;">
                         <li class="nav-item"><a class="nav-link" href="{{ route('wave.loginwithoutclass') }}"

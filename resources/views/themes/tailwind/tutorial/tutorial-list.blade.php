@@ -41,7 +41,7 @@
                                 <a href="{{ $videoDetail['video_url'] }}" target="_blank" rel="noopener noreferrer"
                                     style="text-decoration: none; color: inherit;">
                                     <div class="card rounded-3">
-                                        <img src="{{ isset($videoDetail['image_path']) && $videoDetail['image_path'] != '' ? $videoDetail['image_path'] : 'https://rma-zone.b-cdn.net/hksa/tutorial-video-thumbnail/default-icon-tutorial.png' }}" class="card-img-top" alt="Video Thumbnail" style="height:150px;">
+                                        <img src="{{ isset($videoDetail['image_path']) && $videoDetail['image_path'] != '' ? $videoDetail['image_path'] : 'https://kcwi-storage.b-cdn.net/kcwi/tutorial-video-thumbnail/default-icon-tutorial.png' }}" class="card-img-top" alt="Video Thumbnail" style="height:150px;">
 
                                         <div class="card-body" style="height:120px;">
                                             <p class="card-title p18b">{!! substr($videoDetail['video_title'], 0, 40) . ' ...' !!}</p>

@@ -47,7 +47,7 @@
                 @foreach($levels['response'] as $level)
                 <a href="{{ route('wave.levellists', ['id' => $level['id']]) }}" style="text-decoration: none;margin-bottom:25px" class="col-6 col-sm-3">
                     <div class="banner-container" style="width: 100%; height: 80%; border-radius: 20px; overflow: hidden;">
-                        <img src="{{ isset($level) && $level['banner'] != '' ?$level['banner']: 'https://rma-zone.b-cdn.net/hksa/level-icon/default-level-icon.png'; }}" style="object-fit: cover; width: 100%; height: 100%;">
+                        <img src="{{ isset($level) && $level['banner'] != '' ?$level['banner']: 'https://kcwi-storage.b-cdn.net/kcwi/level-icon/default-level-icon.png'; }}" style="object-fit: cover; width: 100%; height: 100%;">
                     </div>
                     <p class="p18b" style="text-align: left;margin-bottom: 0px;width:100%">{{ $level['name'] }}</p>
                     <p class="p12" style="width:100%">{{ $level['age'] }}</p>

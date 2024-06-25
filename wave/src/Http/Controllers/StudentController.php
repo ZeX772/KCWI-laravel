@@ -415,7 +415,7 @@ class StudentController extends Controller
     
             $filename = uniqid() . '.' . $file->getClientOriginalExtension();
             try {
-                $imageName = BunnyCDN::updateFile($file, $filename, 'hksa/profile-image/')['url'];
+                $imageName = BunnyCDN::updateFile($file, $filename, 'kcwi/profile-image/')['url'];
                 $requestData['imageName'] = $imageName;
     
                 // Update profile via API

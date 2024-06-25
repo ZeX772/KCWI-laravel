@@ -118,7 +118,7 @@
                                 </a>
                             </div>
                         @endforeach
-                        <p class="p16normal2">If you haven’t been HKSA student before,<br>
+                        <p class="p16normal2">If you haven’t been kcwi student before,<br>
                             <a href="{{ route('wave.newstudent') }}" class="p16b">fill in the enrollment form and register
                                 now!</a>
                         </p>
