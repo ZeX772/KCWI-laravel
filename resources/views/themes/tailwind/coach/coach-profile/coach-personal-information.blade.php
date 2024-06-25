@@ -164,7 +164,7 @@
                 style="background: #FFF;padding: 20px;min-height:100%; ">
                 <div class="container-fluid d-flex flex-column p-0">
                     <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0"
-                        href="#"><img src="{{ asset('themes/tailwind/images/HKSA-logo-1.png') }}"
+                        href="#"><img src="{{ asset('themes/tailwind/images/kcwi-logo-1.png') }}"
                             style="width: 200px;height: 67px; margin-top: 60px;" width="191" height="16"></a>
                     <ul class="navbar-nav text-light" id="accordionSidebar" style="margin-top: 20px;">
                         <li class="nav-item"><a class="nav-link d-xl-flex align-items-xl-center" href="Home/1-Homepage.html"

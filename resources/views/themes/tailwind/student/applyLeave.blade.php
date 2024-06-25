@@ -285,7 +285,7 @@
                 <div style="margin-top: 50px;">
                     <p class="p22bold"><img src="../themes/tailwind/images/clipboard-image-55.png" style="width: 37px;margin-right: 10px;"><strong>Note</strong></p>
                     <ul class="p18b" style="text-align: left;">
-                        <li>Parents should notify HKSA at 2295 6066 or email to knock@hkswimmingacademy.com</li>
+                        <li>Parents should notify kcwi at 2295 6066 or email to knock@hkswimmingacademy.com</li>
                         <li>Casual leave: At least 3 days before the lesson begins</li>
                         <li>Sick leave: 3 hours before the lesson (Original doctor or registered Chinese
                             medicine practitioner’s note with indication of time period is compulsory.)</li>

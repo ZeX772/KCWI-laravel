@@ -125,7 +125,7 @@
                     <input class="frame text" type="text" name="grade_of_class" id="grade" placeholder="Grade of Class (optional)">
                 </div>
                 <div class="d-xl-flex d-xxl-flex align-items-xl-center align-items-xxl-center" style="margin-bottom: 10px;">
-                    <input class="frame text" type="text" name="hksa_source" id="hearAboutHKSA" placeholder="Hear about HKSA (optional)">
+                    <input class="frame text" type="text" name="kcwi_source" id="hearAboutkcwi" placeholder="Hear about kcwi (optional)">
                 </div>
                 <div class="d-xl-flex d-xxl-flex align-items-xl-center align-items-xxl-center" style="margin-bottom: 10px;">
                     <input class="frame text" type="number" name="referral_by" id="referralBy" placeholder="Referral by (optional, e.g. : 123)">

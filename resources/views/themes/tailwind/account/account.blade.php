@@ -195,8 +195,7 @@
     <div style="width: 100%; margin-bottom: 30px;"></div>
     <div class="d-xl-flex d-xxl-flex justify-content-xl-center align-items-xl-center justify-content-xxl-center align-items-xxl-center">
         <div>
-            <img class="profile" src="{{ isset($response) && $response['image_path'] != '' ?$response['image_path']: 'https://rma-zone.b-cdn.net/hksa/profile-image/user-profile-icon.png'; }}" style="width: 200px; padding: 15px; background: rgba(133,135,150,0.33); border-top-left-radius: 100px; border-top-right-radius: 100px; border-bottom-right-radius: 100px; border-bottom-left-radius: 100px;" width="200" height="201">
-
+            <img class="profile" src="{{ isset($response) && $response['image_path'] != '' ?$response['image_path']: 'https://kcwi-storage.b-cdn.net/kcwi/profile-image/user-profile-icon.png'; }}" style="width: 200px; padding: 15px; background: rgba(133,135,150,0.33); border-top-left-radius: 100px; border-top-right-radius: 100px; border-bottom-right-radius: 100px; border-bottom-left-radius: 100px;" width="200" height="201">
             <p class="p22bold name" style="text-align: center; margin-bottom: 10px;">{{ isset($response['name']) && $response['name'] != '' ?$response['name']:''; }}</p>
         </div>
     </div>

@@ -130,7 +130,7 @@
 @section('content')
 
 <div class="d-flex flex-column" id="content-wrapper" style="padding-top: 0px;padding-bottom: 0px;padding-right: 0px;padding-left: 0px;background: var(--app-color-tone-bg-color, #F1F2F9);">
-    <div style="transform: translateZ(16px);background: #233656;"><img src="{{ isset($levels) && $levels['banner'] != '' ?$levels['banner']: 'https://rma-zone.b-cdn.net/hksa/level-icon/default-level-icon.png'; }}" style="width: 100%; min-height: 65vh; border-bottom-right-radius: 100px;background: #233656;height: 283.391px; object-fit: cover; object-position: 80% 0%;"></div>
+    <div style="transform: translateZ(16px);background: #233656;"><img src="{{ isset($levels) && $levels['banner'] != '' ?$levels['banner']: 'https://kcwi-storage.b-cdn.net/kcwi/level-icon/default-level-icon.png'; }}" style="width: 100%; min-height: 65vh; border-bottom-right-radius: 100px;background: #233656;height: 283.391px; object-fit: cover; object-position: 80% 0%;"></div>
     <div style="width: auto;margin-right: 0px;margin-top: 100px;margin-left: 100px;position: absolute;" onclick="goBack()"><button class="button2" type="button" style="position: relative; border: none; background-color: white; padding: 10px; border-radius: 10.3226px; box-shadow: 1px 1px 2px black; width: 40px; height: 40px;"><i class="fas fa-chevron-left"></i></button></a></div>
     <div style="transform: translateY(0px) translateZ(0px);position: static;background: #AAC9E4;">
         <div style="height: 150px;background: #233656;border-bottom-right-radius: 100px;padding-left: 12.5%;padding-right: 20px;">

@@ -150,7 +150,7 @@
                                 </div>
                             </div>
                             <div class="d-xl-flex d-xxl-flex flex-column align-items-xl-start align-items-xxl-start">
-                                <p class="p16normal2" style="margin-bottom: 5px;margin-top: 50px;">If you haven’t been HKSA
+                                <p class="p16normal2" style="margin-bottom: 5px;margin-top: 50px;">If you haven’t been kcwi
                                     student before,</p>
                                 <p class="d-xxl-flex p16b"
                                     style="text-decoration: underline; font-size: 13px; color: #171433;">fill in the

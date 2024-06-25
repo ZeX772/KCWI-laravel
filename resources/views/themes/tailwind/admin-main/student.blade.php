@@ -3,14 +3,14 @@
 @section('content')
 <div class="page-container">
     <x-page-content-heading 
-        heading="Student Management" 
+        heading="Member Management" 
         withButton="true"
         withIcon="true"
         icon="plus"
         buttonModalTarget="#information-modal" 
         buttonType="button"
         buttonId="add-student_btn"
-        buttonTitle="Add Student"
+        buttonTitle="Add Member"
     />
     <div class="row mt-4">
         <!-- Student List | Left - Table Section -->
@@ -20,7 +20,7 @@
                     inputType="text"
                     inputName="student_search"
                     inputID="student_search"
-                    inputPlaceholder="Search Student (Name/ID/Phone/Parent)"
+                    inputPlaceholder="Search Student (Name/ID)"
                 />
                 <div class="table-responsive table-custom data-table with-custom-search mt-3">
                     <table class="table table-hover w-100" id="student-table">
@@ -28,7 +28,6 @@
                             <tr>
                                 <th class="text-left">NAME/ID</th>
                                 <th class="text-left">GENDER</th>
-                                <th class="text-left">LEVEL</th>
                                 <th class="text-left">CURRENT COURSE</th>
                                 <th class="text-left">PHONE</th>
                                 <th class="text-center"></th>
@@ -108,7 +107,7 @@
                         </div>
                         <div class="col-4">
                             <div>
-                                <h6 class="detail-content-heading">HKID</h6>
+                                <h6 class="detail-content-heading">NRIC(Mykad)</h6>
                                 <p id="detail-hkid" class="detail-content-heading_value">-</p>
                             </div>
                         </div>
@@ -120,12 +119,6 @@
                                 <p id="detail-address" class="detail-content-heading_value">-</p>
                             </div>
                         </div>
-                        <div class="col-6">
-                            <div>
-                                <h6 class="detail-content-heading">SCHOOL</h6>
-                                <p id="detail-school" class="detail-content-heading_value">-</p>
-                            </div>
-                        </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-6">
@@ -134,12 +127,12 @@
                                 <p id="detail-phone" class="detail-content-heading_value">-</p>
                             </div>
                         </div>
-                        <div class="col-6">
+                        {{-- <div class="col-6">
                             <div>
                                 <h6 class="detail-content-heading">GRADE OF CLASS</h6>
                                 <p id="detail-grade_of_class" class="detail-content-heading_value">-</p>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                     <div class="row">
                         <div class="col-12">
@@ -154,18 +147,6 @@
             <!-- Additional Details -->
             <div>
                 <div class="row mt-5">
-                    <div class="col-6">
-                        <h5 class="detail-column-heading mb-2">SIBLING</h5>
-                        <div id="detail-siblings_container" class="grid-repeat-col-2 gap-5">
-                            <p class="text-muted">No Data</p>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <h5 class="detail-column-heading mb-2">GUARDIAN</h5>
-                        <div id="detail-guardians_container" class="grid-repeat-col-2 gap-5">
-                            <p class="text-muted">No Data</p>
-                        </div>
-                    </div>
                 </div>
                 <div class="mt-4">
                     <h5 class="detail-column-heading mb-2">EMERGENCY CONTACT</h5>
@@ -249,14 +230,7 @@
                     </div>
                     <div class="container d-xxl-flex align-items-xxl-center form-input-container gap-4 mb-3">
                         <x-form-input 
-                            label="Chinese Name" 
-                            type="text" 
-                            name="chinese_name"
-                            id="chinese_name"
-                            isRequired="false"
-                        />
-                        <x-form-input 
-                            label="HKID" 
+                            label="NRIC(MyKad)" 
                             type="text" 
                             name="hkid"
                             id="hkid"
@@ -311,35 +285,6 @@
                     </div>
                     <div class="container d-xxl-flex align-items-xxl-center form-input-container gap-4 mb-3">
                         <x-form-select
-                            label="School" 
-                            name="school_id"
-                            id="school_id"
-                            isRequired="false"
-                        >
-                            <option value="" hidden>Select School</option>
-                            @foreach($schools as $school)
-                                <option value="{{ $school['id'] }}">{{ $school['name'] }}</option>
-                            @endforeach
-                        </x-form-select>
-                    </div>
-                    <div class="container d-xxl-flex align-items-xxl-center form-input-container gap-4 mb-3">
-                        <x-form-input 
-                            label="Grade of Class" 
-                            type="text" 
-                            name="grade_of_class"
-                            id="grade_of_class"
-                            isRequired="false"
-                        />
-                        <x-form-input 
-                            label="Hear about HKSA" 
-                            type="text" 
-                            name="hear_about_us"
-                            id="hear_about_us"
-                            isRequired="false"
-                        />
-                    </div>
-                    <div class="container d-xxl-flex align-items-xxl-center form-input-container gap-4 mb-3">
-                        <x-form-select
                             label="Referral by / others" 
                             name="referral_by"
                             id="referral_by"
@@ -349,20 +294,8 @@
                                 <option value="{{ $user['id'] }}">{{ $user['name'] }}</option>
                             @endforeach
                         </x-form-select>
-                        <x-form-select
-                            label="Level" 
-                            name="student_level"
-                            id="student_level"
-                            isRequired="false"
-                        >
-                            <option value="" hidden>Select Level</option>
-
-                            @foreach( $levels as $level )
-                                <option value="{{ $level['id'] }}">{{ $level['name'] }}</option>
-                            @endforeach
-                        </x-form-select>
                     </div>
-                    <div class="container d-xxl-flex align-items-xxl-center form-input-container gap-4 mb-3 select2">
+                    {{-- <div class="container d-xxl-flex align-items-xxl-center form-input-container gap-4 mb-3 select2">
                         <x-form-select
                             label="Sibling" 
                             name="sibling"
@@ -375,18 +308,18 @@
                                 <option value="{{ $sibling['id'] }}">{{ $sibling['name'] }}</option>
                             @endforeach
                         </x-form-select>
-                    </div>
+                    </div> --}}
                     <div id="selected-sibling-container" class="d-flex flex-wrap gap-1 mt-2 mb-3"></div>
                     <!-- Section for Adding Multiple Data -->
                     <div class="mb-3">
-                        <label class="form-label form-input-label">Guardian</label>
+                        {{-- <label class="form-label form-input-label">Guardian</label> --}}
                         <!-- Form for Adding Guardian -->
                         <div class="container guardian-form_container form-input-container mb-3 d-none">
                             <div class="card">
                                 <div class="card-body">
-                                    <div class="mb-3 manual-btn_container">
+                                    {{-- <div class="mb-3 manual-btn_container">
                                         <x-button-icon-text type="button" id="add-guardian_form" title="Add New Account" icon="plus" />
-                                    </div>
+                                    </div> --}}
 
                                     <div class="mb-3 selection-btn_container d-none">
                                         <x-button-icon-text type="button" id="selection-guardian_form" title="Link Existing Account" icon="plus" />
@@ -416,7 +349,7 @@
                                             />
                                         </div>
                                     </div>
-                                    <div class="existing-guardian-selection">
+                                    {{-- <div class="existing-guardian-selection">
                                         <div class="container d-xxl-flex align-items-xxl-center form-input-container gap-4 mb-3">
                                             <x-form-select
                                                 label="Select Guardian" 
@@ -431,7 +364,7 @@
                                                 @endforeach
                                             </x-form-select>
                                         </div>
-                                    </div>
+                                    </div> --}}
 
                                     <div class="container d-xxl-flex align-items-xxl-center form-input-container gap-4 mb-3">
                                         <x-form-input 
@@ -450,7 +383,7 @@
                             </div>
                         </div>
                         <div class="mb-3">
-                            <x-button-icon-text type="button" id="show-guardian_form" title="Add Guardian" icon="plus" />
+                            <x-button-icon-text type="button" id="show-guardian_form" title="" icon="" />
                         </div>
                         <!-- Container for listing added Data -->
                         <div id="guardian-container" class="d-flex flex-wrap gap-1">

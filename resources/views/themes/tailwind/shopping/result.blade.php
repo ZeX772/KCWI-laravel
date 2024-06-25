@@ -282,7 +282,7 @@
                 <a href="{{ route('wave.item', ['id' => $product['id']]) }}" style="text-decoration: none;color:black;">
                     <input type="hidden" name="product_id" value="{{ $product['id'] }}">
                     <div class="product align-items-center divcard container" style="padding: 10px;width: 250px;margin-right:0px;">
-                        <img src="{{ isset($product) && $product['images'][0]['image_path'] != '' ?$product['images'][0]['image_path']: 'https://rma-zone.b-cdn.net/hksa/product-images/default-product-icon.png'; }}" style="width: 117px;margin-right: 10px;" class="image">
+                        <img src="{{ isset($product) && $product['images'][0]['image_path'] != '' ?$product['images'][0]['image_path']: 'https://kcwi-storage.b-cdn.net/kcwi/product-images/default-product-icon.png'; }}" style="width: 117px;margin-right: 10px;" class="image">
                         <div>
                             <p class="p18red" style="margin-bottom: 0px;text-align: left;">
                                 HK${{ $product['price'] }}</p>

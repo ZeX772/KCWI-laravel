@@ -15,7 +15,7 @@
                         <p>We have resent the OTP code to your email. Please kindly check your inbox, including the spam folder.</p>
 
                         <div class="logo-box">
-                            <img src="{{ asset('themes/tailwind/images/HKSA-logo-1.png') }}" alt="Logo" class="logo-img">
+                            <img src="{{ asset('themes/tailwind/images/kcwi-logo-1.png') }}" alt="Logo" class="logo-img">
                         </div>
                         <form action="{{ route('resend-otp') }}" method="post">
                             @csrf
