@@ -34,7 +34,11 @@ return [
             ],
             'route' => 'wave.user.admin-main.student',
             'has_badge' => false,
+<<<<<<< Updated upstream
             'name' => 'student',
+=======
+            'name' => 'member',
+>>>>>>> Stashed changes
             'label' => 'Member',
             'icon' => 'themes/tailwind/images/clipboard-image-2.png',
             'is_subitem' => false

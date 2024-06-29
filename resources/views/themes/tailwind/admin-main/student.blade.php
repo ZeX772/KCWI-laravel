@@ -107,7 +107,11 @@
                         </div>
                         <div class="col-4">
                             <div>
+<<<<<<< Updated upstream
                                 <h6 class="detail-content-heading">hkid(Mykad)</h6>
+=======
+                                <h6 class="detail-content-heading">NRIC(MyKad)</h6>
+>>>>>>> Stashed changes
                                 <p id="detail-hkid" class="detail-content-heading_value">-</p>
                             </div>
                         </div>
