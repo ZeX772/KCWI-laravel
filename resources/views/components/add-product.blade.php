@@ -165,12 +165,6 @@
         transformedData['price'] = parseFloat(transformedData['price']).toFixed(2);
         transformedData['discount_percentage'] = parseFloat(transformedData['discount_percentage']).toFixed(2);
 
-        // console.log(transformedData);
-        const BUNNYCDN_API_KEY = '1d6ac4af-2784-4a05-ba954704d423-e5f7-4088';
-const BUNNYCDN_STORAGE_ZONE = 'kcwi-storage';
-const BUNNYCDN_URL = 'https://kcwi-storage.b-cdn.net';
-const TARGET_FOLDER = 'kcwi/product_images/';
-
 async function uploadToBunnyCDN(file) {
     const storageZoneName = BUNNYCDN_STORAGE_ZONE;
     const accessKey = BUNNYCDN_API_KEY;
