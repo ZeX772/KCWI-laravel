@@ -20,7 +20,7 @@
                     inputType="text"
                     inputName="student_search"
                     inputID="student_search"
-                    inputPlaceholder="Search Student (Name/ID)"
+                    inputPlaceholder="Search Member (Name/ID)"
                 />
                 <div class="table-responsive table-custom data-table with-custom-search mt-3">
                     <table class="table table-hover w-100" id="student-table">
@@ -107,7 +107,7 @@
                         </div>
                         <div class="col-4">
                             <div>
-                                <h6 class="detail-content-heading">NRIC(Mykad)</h6>
+                                <h6 class="detail-content-heading">hkid(Mykad)</h6>
                                 <p id="detail-hkid" class="detail-content-heading_value">-</p>
                             </div>
                         </div>
@@ -630,7 +630,7 @@
                                         <th class="text-left">COACH</th>
                                         <th class="text-left">DATE</th>
                                         <th class="text-left">TIME</th>
-                                        <th class="text-left">TOTAL FEE (HK$)</th>
+                                        <th class="text-left">TOTAL FEE (RM)</th>
                                         <th class="text-left">COURSE CATEGORY</th>
                                     </tr>
                                 </thead>
@@ -687,7 +687,7 @@
                                         <th class="text-left">COACH</th>
                                         <th class="text-left">DATE</th>
                                         <th class="text-left">TIME</th>
-                                        <th class="text-left">TOTAL FEE (HK$)</th>
+                                        <th class="text-left">TOTAL FEE (RM)</th>
                                         <th class="text-left">COURSE CATEGORY</th>
                                     </tr>
                                 </thead>

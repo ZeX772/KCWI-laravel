@@ -16,7 +16,7 @@
                                 <th class="text-left">INVOICE NO.</th>
                                 <th class="text-left">COURSE CODE</th>
                                 <th class="text-left">DATE</th>
-                                <th class="text-left">TOTAL FEE (HK$)</th>
+                                <th class="text-left">TOTAL FEE (RM)</th>
                                 <th class="text-left">PAYMENT METHOD</th>
                                 <th class="text-left"></th>
                             </tr>
@@ -94,7 +94,7 @@
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col-md-6">
-                                            <h1 class="card-detail_title">Total Fee (HK$)</h1>
+                                            <h1 class="card-detail_title">Total Fee (RM)</h1>
                                         </div>
                                         <div class="col-md-6">
                                             <h1 id="info-total_fee" class="card-detail_sub_title">-</h1>
@@ -161,7 +161,7 @@
                 <thead style="border-bottom: 1px solid #d5d5d5;">
                     <tr>
                     <th class="table-header">PAYMENT METHOD</th>
-                    <th class="table-header">TOTAL FEE (HK$)</th>
+                    <th class="table-header">TOTAL FEE (RM)</th>
                     <th class="table-header">PAYMENT DATE</th>
                     <th class="table-header"></th>
                     <th class="table-header" style="width: 25px;"></th>
@@ -385,7 +385,7 @@
                             <div>
                                 <div class="container d-xxl-flex align-items-xxl-center form-input-container gap-4 mb-3">
                                     <x-form-input 
-                                        label="TOTAL FEE (HK$)" 
+                                        label="TOTAL FEE (RM)" 
                                         type="text" 
                                         name="total_fee"
                                         id="total_fee"
@@ -1031,7 +1031,7 @@
                             <div>
                                 <div class="container d-xxl-flex align-items-xxl-center form-input-container gap-4 mb-3">
                                     <x-form-input 
-                                        label="TOTAL FEE (HK$)" 
+                                        label="TOTAL FEE (RM)" 
                                         type="text" 
                                         name="total_fee"
                                         id="total_fee"

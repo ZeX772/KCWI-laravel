@@ -41,8 +41,8 @@
                                 <th class="text-left">NAME / ID</th>
                                 <th class="text-left">COURSE CODE</th>
                                 <th class="text-left">COURSE DATE</th>
-                                <th class="text-left">TOTAL FEE (HK$)</th>
-                                <th class="text-left">ACTUAL PAID (HK$)</th>
+                                <th class="text-left">TOTAL FEE (RM)</th>
+                                <th class="text-left">ACTUAL PAID (RM)</th>
                                 <th class="text-left">VIA EMAIL</th>
                                 <th class="text-left">VIA APP</th>
                                 <th class="text-right" style="width: 230px;"></th>
@@ -146,7 +146,7 @@
                             <thead style="border-bottom: 1px solid #d5d5d5;">
                                 <tr>
                                 <th class="table-header">PAYMENT METHOD</th>
-                                <th class="table-header">TOTAL FEE (HK$)</th>
+                                <th class="table-header">TOTAL FEE (RM)</th>
                                 <th class="table-header">PAYMENT DATE</th>
                                 <th class="table-header"></th>
                                 <th class="table-header" style="width: 25px;"></th>
@@ -327,7 +327,7 @@
                             <div>
                                 <div class="container d-xxl-flex align-items-xxl-center form-input-container gap-4 mb-3">
                                     <x-form-input 
-                                        label="TOTAL FEE (HK$)" 
+                                        label="TOTAL FEE (RM)" 
                                         type="text" 
                                         name="total_fee"
                                         id="total_fee"

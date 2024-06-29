@@ -41,7 +41,7 @@
 									<th class="text-left">STUDENT</th>
 									<th class="text-left">TYPE</th>
 									<th class="text-left">CONSOLIDATED</th>
-									<th class="text-left">TOTAL AMOUNT (HK$)</th>
+									<th class="text-left">TOTAL AMOUNT (RM)</th>
 									<th class="text-left">STATUS</th>
 								</tr>
 							</thead>
@@ -120,7 +120,7 @@
  									</div>
  									<div class="row mb-3">
  										<div class="col-md-6">
- 											<h1 class="card-detail_title">Total Amount (HK$)</h1>
+ 											<h1 class="card-detail_title">Total Amount (RM)</h1>
  										</div>
  										<div class="col-md-6">
  											<h1 id="detail-total_amount" class="card-detail_sub_title">-</h1>

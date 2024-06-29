@@ -347,7 +347,7 @@
                                 </div>
                                 <div class="container d-xxl-flex align-items-xxl-center form-input-container gap-4 mb-3">
                                     <x-form-input label="Class Size (Maximum Number of Students)" type="number" name="class_size" id="class_size" isRequired=false disabled=true customClass="disabled" />
-                                    <x-form-input label="Fee (HK$) Per Class" type="number" name="fee_per_class" id="fee_per_class" isRequired=false disabled=true customClass="disabled" />
+                                    <x-form-input label="Fee (RM) Per Class" type="number" name="fee_per_class" id="fee_per_class" isRequired=false disabled=true customClass="disabled" />
                                 </div>
                                 <div class="container d-xxl-flex align-items-xxl-center form-input-container gap-4 mb-3">
                                     <x-form-select label="Venue" name="default_venue_id" id="default_venue_id" isRequired="false" dataAttribute="disabled" customClass="disabled">

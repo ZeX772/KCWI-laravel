@@ -28,7 +28,7 @@
                     </div>
                     <div class="col-4">
                         <div>
-                            <h6 class="detail-content-heading">HKID</h6>
+                            <h6 class="detail-content-heading">NRIC(MyKad)</h6>
                             <p id="detail-hkid" class="detail-content-heading_value">{{ $entry['student_information']['hkid'] ?? "-" }}</p>
                         </div>
                     </div>

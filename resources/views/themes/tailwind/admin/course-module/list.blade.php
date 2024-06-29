@@ -63,7 +63,7 @@
                                         <th>CLASS SIZE</th>
                                         <th>VENUE</th>
                                         <th>FACILITY</th>
-                                        <th>TOTAL FEE (HK$)</th>
+                                        <th>TOTAL FEE (RM)</th>
                                         <th>COACH(ES)</th>
                                         <th>STATUS</th>
                                         <th>ACTION</th>
@@ -134,7 +134,7 @@
                                         </div>
                                         <div class="row" style="margin-bottom: 10px;">
                                             <div class="col-md-6">
-                                                <h1 style="color: #636363;font-size: 14px;font-family: Poppins, sans-serif;">Fee (HK$)</h1>
+                                                <h1 style="color: #636363;font-size: 14px;font-family: Poppins, sans-serif;">Fee (RM)</h1>
                                             </div>
                                             <div class="col-md-6">
                                                 <h1 style="color: #7a7a7a;font-size: 14px;font-family: Poppins, sans-serif;">1860</h1>
@@ -253,7 +253,7 @@
                                     <input required id="course_size" name="course_size" class="form-control" type="text" style="color: #3B3B3B;font-size: 14px;font-family: Nunito, sans-serif;background: #F5F5F5;border-style: none;height: 48px;"></div>
                             </div>
                             <div class="form-inline" style="width: 100%;margin-left: 10px;">
-                                <div class="form-group"><label class="form-label" style="color: #636363;font-size: 14px;">Fee (HK$) Per Class</label>
+                                <div class="form-group"><label class="form-label" style="color: #636363;font-size: 14px;">Fee (RM) Per Class</label>
                                     <input value="{{$price}}" required id="class_full_price" name="class_full_price" class="form-control" type="text" style="color: #3B3B3B;font-size: 14px;font-family: Nunito, sans-serif;background: #F5F5F5;border-style: none;height: 48px;">
                                 </div>
                             </div>
@@ -455,7 +455,7 @@
                                     <input required name="course_size" id="course_size_edit" class="course-size form-control" type="text" style="color: #3B3B3B;font-size: 14px;font-family: Nunito, sans-serif;background: #F5F5F5;border-style: none;height: 48px;"></div>
                             </div>
                             <div class="form-inline" style="width: 100%;margin-left: 10px;">
-                                <div class="form-group"><label class="form-label" style="color: #636363;font-size: 14px;">Fee (HK$) Per Class</label>
+                                <div class="form-group"><label class="form-label" style="color: #636363;font-size: 14px;">Fee (RM) Per Class</label>
                                     <input required name="class_full_price" id="class_full_price_edit" class="class-full-price form-control" type="text" style="color: #3B3B3B;font-size: 14px;font-family: Nunito, sans-serif;background: #F5F5F5;border-style: none;height: 48px;">
                                 </div>
                             </div>

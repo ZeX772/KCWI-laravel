@@ -108,7 +108,7 @@
                             isRequired=false
                         />
                         <x-form-input 
-                            label="Fee (HK$) Per Competition" 
+                            label="Fee (RM) Per Competition" 
                             type="text" 
                             name="enrollment_price"
                             id="enrollment_price"

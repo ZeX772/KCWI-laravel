@@ -171,7 +171,7 @@
                                 {{ $myOrderDetail['transaction_id'] }} </p>
                         </div>
                         <div class="d-xl-flex d-xxl-flex align-items-xl-start align-items-xxl-start">
-                            <p class="p16normal3" style="margin-bottom: 5px;">Unit price (HK$):</p>
+                            <p class="p16normal3" style="margin-bottom: 5px;">Unit price (RM):</p>
                             <p class="p16b" style="margin-bottom: 20px;margin-top:-5px;">
                                 {{ $myOrderDetail['unit_price'] }}</p>
                         </div>
@@ -216,7 +216,7 @@
                 <div style="padding: 15px;padding-left: 30px;" class="divcard">
                     <div class="box1 d-xxl-flex flex-column align-items-xxl-start" style="width: 137%; margin-left: -100px; padding: 15px;">
                         <div class="d-xl-flex d-xxl-flex align-items-xl-start align-items-xxl-start">
-                            <p class="p16normal3" style="margin-bottom: 5px;margin-right:10px;">Total fee (HK$):</p>
+                            <p class="p16normal3" style="margin-bottom: 5px;margin-right:10px;">Total fee (RM):</p>
                             <p class="p16b" style="margin-top:-5px;"> {{ $totalFee }}</p>
                         </div>
                     </div>

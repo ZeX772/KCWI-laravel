@@ -268,7 +268,7 @@
                                                     <div class="textField d-xl-flex d-xxl-flex justify-content-between align-items-xl-center align-items-xxl-center "
                                                         style="padding-right: 20px;padding-left: 20px;padding-bottom: 20px;padding-top: 20px;">
                                                         <p class="p14b1" style="margin-bottom: 0px;">Location</p>
-                                                        <p class="p14b" style="margin-bottom: 0px;">Hong Kong</p>
+                                                        <p class="p14b" style="margin-bottom: 0px;">Malaysia</p>
                                                     </div>
                                                     <div class="textField d-xl-flex d-xxl-flex justify-content-between align-items-xl-center align-items-xxl-start"
                                                         style="padding-right: 20px;padding-left: 20px;height: auto;padding-top: 20px;padding-bottom: 20px;border-radius:36px;">
@@ -276,7 +276,7 @@
                                                         <p class="p14b"
                                                             style="margin-bottom: 0px;width: 80%;text-align: right;">2108
                                                             Paul Y. Centre 51 Hung<br>To Road Kowloon,Kwun Tong
-                                                            <br>District,Hongkong</p>
+                                                            <br>District,Lol</p>
                                                     </div>
                                                 </div>
                                             </div>

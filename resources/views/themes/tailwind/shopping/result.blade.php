@@ -285,7 +285,7 @@
                         <img src="{{ isset($product) && $product['images'][0]['image_path'] != '' ?$product['images'][0]['image_path']: 'https://kcwi-storage.b-cdn.net/kcwi/product-images/default-product-icon.png'; }}" style="width: 117px;margin-right: 10px;" class="image">
                         <div>
                             <p class="p18red" style="margin-bottom: 0px;text-align: left;">
-                                HK${{ $product['price'] }}</p>
+                                RM{{ $product['price'] }}</p>
                             <p class="p14b" style="margin-bottom: 0px;">
                                 {!! substr($product['name'], 0, 16) . (strlen($product['name']) > 16 ? '...' : '') !!}
                         </div>

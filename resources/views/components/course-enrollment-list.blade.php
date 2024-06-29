@@ -222,7 +222,7 @@
                             <h2>Payment</h2>
                             <div class="detail_body">
                                 <dl class="row mb-2">
-                                    <dd class="col-sm-3">Total fee (HK$)</dd>
+                                    <dd class="col-sm-3">Total fee (RM)</dd>
                                     <dd class="col-sm-9" id="course-detail_fee">1,860</dd>
                                 </dl>
                                 <dl class="row mb-2">

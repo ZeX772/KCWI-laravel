@@ -242,7 +242,7 @@
                                     class="box1 d-xxl-flex flex-column align-items-xxl-start"style="width:137%;margin-left:-100px; padding: 15px;">
                                     <div class="d-xl-flex d-xxl-flex align-items-xl-center align-items-xxl-center">
                                         <p class="p16normal3" style="margin-right: 10px;margin-bottom: 0px;">Total fee
-                                            (HK$): </p>
+                                            (RM): </p>
                                         <p class="p16b" style="margin-bottom: 0px;">1860</p>
                                     </div>
                                 </div>

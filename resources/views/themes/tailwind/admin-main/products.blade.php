@@ -72,7 +72,7 @@
                                     label="Product Name" 
                                     type="text" 
                                     name="name"
-                                    placeholder="Ticket - Girls 400m Freestyle"
+                                    placeholder=""
                                     id="name"
                                     isRequired="true"
                                 />

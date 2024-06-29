@@ -390,7 +390,7 @@
                                         customClass="disabled"
                                     />    
                                     <x-form-input 
-                                        label="Fee (HK$) Per Class" 
+                                        label="Fee (RM) Per Class" 
                                         type="number" 
                                         name="fee_per_class"
                                         id="fee_per_class"
@@ -505,7 +505,7 @@
                                         isRequired=true
                                     />    
                                     <x-form-input 
-                                        label="Fee (HK$) Per Class" 
+                                        label="Fee (RM) Per Class" 
                                         type="number" 
                                         name="new_course_fee_per_class"
                                         id="new_course_fee_per_class"

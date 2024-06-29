@@ -111,7 +111,7 @@
 						</div> -->
 						<div class="col-4">
 							<div>
-								<h1 style="color: #7A7A7A;font-size: 12px;font-family: Poppins, sans-serif;">HKID</h1>
+								<h1 style="color: #7A7A7A;font-size: 12px;font-family: Poppins, sans-serif;">hkid</h1>
 								<h1 id="detail-hkid" style="color: #3B3B3B;font-size: 14px;font-family: Poppins, sans-serif;">-</h1>
 							</div>
 						</div>
@@ -362,7 +362,7 @@
 						<div class="container d-xxl-flex justify-content-between align-items-xxl-center" style="padding: 0px;color: #636363;margin-top: 20px;">
 							<div class="form-inline" style="width: 100%;margin-right: 10px;">
 								<div class="form-group">
-									<label class="form-label" style="color: #636363;font-size: 14px;">HKID <span class="text-danger">*</span></label>
+									<label class="form-label" style="color: #636363;font-size: 14px;">hkid <span class="text-danger">*</span></label>
 									<input name="hkid" class="form-control" type="text" style="color: #3B3B3B;font-size: 14px;font-family: Nunito, sans-serif;background: #F5F5F5;border-style: none;height: 48px;">
 								</div>
 							</div>

@@ -196,7 +196,7 @@
                                     <div class="d-xxl-flex flex-column align-items-xxl-start">
                                         <div class="d-xl-flex d-xxl-flex align-items-xl-center align-items-xxl-center">
                                             <p class="p13" style="margin-right: 10px;margin-bottom: 0px;">Total fee
-                                                (HK$): </p>
+                                                (RM): </p>
                                             <p class="p13normal" style="margin-bottom: 0px;">{{ $totalFee }}</p>
                                         </div>
                                     </div>

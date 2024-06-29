@@ -37,7 +37,7 @@
                                 <th class="text-left">SIZE</th>
                                 <th class="text-left">VENUE</th>
                                 <th class="text-left">FACILITY</th>
-                                <th class="text-left">TOTAL FEE (HK$)</th>
+                                <th class="text-left">TOTAL FEE (RM)</th>
                                 <th class="text-left">STATUS</th>
                                 <th class="text-center" style="width: 60px;"></th>
                             </tr>
@@ -138,7 +138,7 @@
  									</div>
  									<div class="row mb-3">
  										<div class="col-md-6">
- 											<h1 class="card-detail_title">Fee (HK$)</h1>
+ 											<h1 class="card-detail_title">Fee (RM)</h1>
  										</div>
  										<div class="col-md-6">
  											<h1 id="detail-competition_fee" class="card-detail_sub_title">-</h1>
@@ -235,7 +235,7 @@
                             isRequired="false"
                         />
                         <x-form-input 
-                            label="Fee (HK$) Per Competition" 
+                            label="Fee (RM) Per Competition" 
                             type="text" 
                             name="enrollment_price"
                             id="enrollment_price"

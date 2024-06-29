@@ -107,7 +107,7 @@
 
 @media(max-width:1920px){
     .search{
-        width:1000px;
+        width:800px;
     }
 }
 @media(max-width:1440px){
@@ -260,14 +260,13 @@
         <div class="row row-cols-2">
             @foreach ($shoppingProducts as $shoppingProduct)
             <div class="col-6 col-sm-3 divcard">
-                @dd($shoppingProducts)
                 {{-- @dd($shoppingProducts); --}}
                 <a href="{{ route('wave.item', ['id' => $shoppingProduct['id']]) }}" style="text-decoration: none;color:black;">
                     <input type="hidden" name="product_id" value="{{ $shoppingProduct['id'] }}">
                     <div class="d-md-flex d-lg-flex d-xl-flex d-xxl-flex align-items-md-center align-items-lg-center align-items-xl-center align-items-xxl-center divcard container" style="padding: 10px;width: auto;">
-                        <img src="{{ $shoppingProduct['image_path'] }}" style="width: 117px;margin-right: 10px;" class="image">
+                        <img src="{{ $shoppingProduct['stored_file_name'] }}" style="width: 117px;height:100px;margin-right: 10px;" class="image">
                         <div>
-                            <p class="p18red" style="margin-bottom: 0px;text-align: left;color:#ff4d4d">HK${{ $shoppingProduct['price'] }}</p>
+                            <p class="p18red" style="margin-bottom: 0px;text-align: left;color:#ff4d4d">RM{{ $shoppingProduct['price'] }}</p>
                             <p class="p14b" style="margin-bottom: 0px;">
                                 {!! substr($shoppingProduct['name'], 0, 18) . (strlen($shoppingProduct['name']) > 18 ? '...' : '') !!}
                                 {{-- {{ $shoppingProduct['name'] }}</p> --}}

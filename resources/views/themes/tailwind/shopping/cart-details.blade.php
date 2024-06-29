@@ -347,7 +347,7 @@
                         <p id="subtotal-{{$cartProduct['order_item_id']}}" class="pb bp" style="align-items: left;margin-left:-100px;">Subtotal ({{$cartProduct['ordered_quantity']}} item)</p>
                     </div>
                     <div class="col-md-6 col-6"> <!-- Align content to the right -->
-                        <p class="pb">Total Price: <span id="totalPrice-{{ $cartProduct['order_item_id'] }}">HK${{ $cartProduct['ordered_quantity'] * $cartProduct['unit_price'] }}</span></p>
+                        <p class="pb">Total Price: <span id="totalPrice-{{ $cartProduct['order_item_id'] }}">RM{{ $cartProduct['ordered_quantity'] * $cartProduct['unit_price'] }}</span></p>
                     </div>
                 </div>
                 @endforeach
@@ -357,7 +357,7 @@
                         <p class="p18poppins bp" style ="margin-left:-100px;"><strong>Total</strong></p>
                     </div>
                     <div class="col-md-6 col-6 text-end"> 
-                        <p class="p18poppins">HK$ <span id="price">{{ $totalAmount }}</span></p>
+                        <p class="p18poppins">RM <span id="price">{{ $totalAmount }}</span></p>
                     </div>
                 </div>
             </div>
@@ -452,7 +452,7 @@ function calculateTotalAmount() {
     var totalAmount = 0;
     var totalPriceElements = document.querySelectorAll('[id^="totalPrice-"]');
     totalPriceElements.forEach(function(element) {
-        totalAmount += parseFloat(element.textContent.replace('HK$', ''));
+        totalAmount += parseFloat(element.textContent.replace('RM', ''));
     });
     return totalAmount;
 }
@@ -552,12 +552,12 @@ function calculateTotalAmount() {
                 var totalPrice = quantity * unitPrice;
                 var subtotal = quantity + " item";
 
-                totalPriceElement.textContent = 'HK$' + totalPrice.toFixed(2);
+                totalPriceElement.textContent = 'RM' + totalPrice.toFixed(2);
                 subtotalElement.textContent = 'Subtotal (' + subtotal + ')';
 
                 // Calculate and update the total amount
                 var totalAmount = calculateTotalAmount();
-                totalAmountElement.textContent = 'HK$' + totalAmount.toFixed(2);
+                totalAmountElement.textContent = 'RM' + totalAmount.toFixed(2);
             }
 
             $('#submitBtn').click(function() {

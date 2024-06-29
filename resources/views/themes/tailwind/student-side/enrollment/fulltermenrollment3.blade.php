@@ -138,7 +138,7 @@
                                                     No Schedule Found
                                                 @endif
                                                 </br>
-                                                <h2 class="class-code" style="margin-top: 5px; margin-bottom: 1px;">{{ $course['course_name'] }}<span class="price" style="padding-left: 20px;">HK$ {{ $course['course_full_price'] }}</span></h2>
+                                                <h2 class="class-code" style="margin-top: 5px; margin-bottom: 1px;">{{ $course['course_name'] }}<span class="price" style="padding-left: 20px;">RM {{ $course['course_full_price'] }}</span></h2>
                                             </strong></button></h2>
                                     <div class="accordion-collapse collapse show item-{{$course['id']}}" role="tabpanel" data-bs-parent="#accordion-1" style="border-top-style: solid;border-top-color: rgba(35, 54, 86, 0.50);">
                                         <div class="accordion-body">

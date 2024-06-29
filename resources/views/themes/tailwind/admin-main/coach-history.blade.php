@@ -301,7 +301,7 @@
                             </div>
                             <div class="container d-xxl-flex justify-content-between align-items-xxl-center" style="padding: 0px;color: #636363;margin-top: 20px;">
                                 <form class="form-inline" style="width: 100%;margin-right: 10px;">
-                                    <div class="form-group"><label class="form-label" style="color: #636363;font-size: 14px;">HKID</label><input class="form-control" type="text" style="color: #3B3B3B;font-size: 14px;font-family: Nunito, sans-serif;background: #F5F5F5;border-style: none;height: 48px;" value="K123456(7)"></div>
+                                    <div class="form-group"><label class="form-label" style="color: #636363;font-size: 14px;">hkid</label><input class="form-control" type="text" style="color: #3B3B3B;font-size: 14px;font-family: Nunito, sans-serif;background: #F5F5F5;border-style: none;height: 48px;" value="K123456(7)"></div>
                                 </form>
                                 <form class="form-inline" style="width: 100%;margin-left: 10px;">
                                     <div class="form-group"><label class="form-label" style="color: #636363;font-size: 14px;">Nationality</label><select class="form-control" style="background: #F5F5F5;border-style: none;height: 48px;border-top-left-radius: 9px;border-top-right-radius: 9px;border-bottom-right-radius: 9px;border-bottom-left-radius: 9px;color: #3B3B3B;font-size: 14px;font-family: Poppins, sans-serif;">
@@ -330,7 +330,7 @@
                             </div>
                             <div class="container d-xxl-flex justify-content-between align-items-xxl-center" style="padding: 0px;color: #636363;margin-top: 0px;">
                                 <form class="form-inline" style="width: 100%;margin-right: 10px;">
-                                    <div class="form-group"><label class="form-label" style="color: #636363;font-size: 14px;">Residential Address</label><input class="form-control" type="text" style="color: #3B3B3B;font-size: 14px;font-family: Nunito, sans-serif;background: #F5F5F5;border-style: none;height: 48px;" value="2108 Paul Y. Centre 51 Hung To Road Kowloon,Kwun Tong District,Hongkong"></div>
+                                    <div class="form-group"><label class="form-label" style="color: #636363;font-size: 14px;">Residential Address</label><input class="form-control" type="text" style="color: #3B3B3B;font-size: 14px;font-family: Nunito, sans-serif;background: #F5F5F5;border-style: none;height: 48px;" value="2108 Paul Y"></div>
                                 </form>
                             </div>
                             <div class="container" style="padding: 0px;color: #636363;margin-top: 20px;">

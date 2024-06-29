@@ -166,7 +166,60 @@
         transformedData['discount_percentage'] = parseFloat(transformedData['discount_percentage']).toFixed(2);
 
         // console.log(transformedData);
-        
+        const BUNNYCDN_API_KEY = '1d6ac4af-2784-4a05-ba954704d423-e5f7-4088';
+const BUNNYCDN_STORAGE_ZONE = 'kcwi-storage';
+const BUNNYCDN_URL = 'https://kcwi-storage.b-cdn.net';
+const TARGET_FOLDER = 'kcwi/product_images/';
+
+async function uploadToBunnyCDN(file) {
+    const storageZoneName = BUNNYCDN_STORAGE_ZONE;
+    const accessKey = BUNNYCDN_API_KEY;
+    const targetPath = `${TARGET_FOLDER}${file.name}`;
+    const url = `https://storage.bunnycdn.com/${storageZoneName}/${targetPath}`;
+
+    const response = await fetch(url, {
+        method: 'PUT',
+        headers: {
+            'AccessKey': accessKey,
+            'Content-Type': 'application/octet-stream',
+        },
+        body: file
+    });
+
+    if (response.ok) {
+        const cdnUrl = `${BUNNYCDN_URL}/${targetPath}`;
+        return cdnUrl;
+    } else {
+        throw new Error('Failed to upload image to BunnyCDN');
+    }
+}
+
+async function uploadImages() {
+    const imageFiles = window.selectedImages; // Assuming this is a FileList or an array of File objects
+    const uploadedImageUrls = [];
+
+    for (const file of imageFiles) {
+        try {
+            const cdnUrl = await uploadToBunnyCDN(file);
+            uploadedImageUrls.push(cdnUrl);
+        } catch (error) {
+            console.error('Error uploading file:', file.name, error);
+        }
+    }
+
+    return uploadedImageUrls;
+}
+
+(async () => {
+    try {
+        const uploadedUrls = await uploadImages();
+        transformedData['product_images'] = uploadedUrls;
+        // Continue with the rest of your code to handle transformedData
+    } catch (error) {
+        console.error('Error uploading images:', error);
+    }
+})();
+
         await axios.post(`${getApiUrl()}/product/add`, transformedData, {
                 headers: {
                     'Content-Type': 'application/json',

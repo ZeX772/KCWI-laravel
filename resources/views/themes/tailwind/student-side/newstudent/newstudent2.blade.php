@@ -119,7 +119,7 @@
             <form action="{{ route('wave.newstudent2') }}" method="post">
                 @csrf
                 <div class="d-xl-flex d-xxl-flex align-items-xl-center align-items-xxl-center" style="margin-bottom: 10px;">
-                    <input class="frame text" type="text" name="hkid" id="HKID" placeholder="HKID ie.S955583" value="" required>
+                    <input class="frame text" type="text" name="hkid" id="hkid" placeholder="hkid ie.S955583" value="" required>
                 </div>
 
                 <div class="d-xl-flex d-xxl-flex align-items-xl-center align-items-xxl-center" style="margin-bottom: 10px;">

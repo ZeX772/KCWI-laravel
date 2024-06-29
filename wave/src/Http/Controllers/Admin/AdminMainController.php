@@ -5,7 +5,6 @@ namespace Wave\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
-
 use function PHPUnit\Framework\isEmpty;
 use function PHPUnit\Framework\isNull;
 
@@ -13,8 +12,10 @@ class AdminMainController extends Controller
 {
     public function dashboard()
     {
+        // $apiToken = session('api_token');
+        // dd($apiToken);
         $response = Http::withToken(session('api_token'))->get(config('services.api_url').'/dashboard/list');
-        // dd($response['response']);
+        //  dd($response);
         return view('theme::admin-main.dashboard')->with([
             'entries' => $response ? $response['response'] : [],
         ]);
@@ -40,6 +41,7 @@ class AdminMainController extends Controller
         $students = Http::withToken(session('api_token'))->get(config('services.api_url').'/student/list');
         $students = $students ? $students['response'] : [];
 
+        //  dd($students);
         $events = [];
         foreach($classes as $class)
         {
@@ -365,15 +367,6 @@ class AdminMainController extends Controller
         ]);
     }
 
-    public function qrScanner()
-    {
-        $schoolVenues = Http::withToken(session('api_token'))
-                        ->get(config('services.api_url').'/school-venue/all');
-
-        return view('theme::admin-main.qr-scanner')->with([
-            'venues' => $schoolVenues ? $schoolVenues['response'] : []
-        ]);
-    }
 
     public function competition()
     {
@@ -497,9 +490,9 @@ class AdminMainController extends Controller
             'search' => $search,
             'tab' => $tab,
         ]);
-
+        // dd($products->json());
         $allProducts = Http::withToken(session('api_token'))->get(config('services.api_url').'/product/all');
-        
+        // dd($allProducts->json());
         return view('theme::admin-main.products')->with([
             'list' => $products ? $products['response'] : [],
             'available_products' => $products['available_products'] ?? [],

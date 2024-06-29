@@ -538,7 +538,7 @@
                                                                     <th style="color: #7A7A7A;font-family: Poppins, sans-serif;font-size: 1.2vh;font-weight: 700;">COURSE LEVEL</th>
                                                                     <th style="color: #7A7A7A;font-family: Poppins, sans-serif;font-size: 1.2vh;font-weight: 700;">CLASS SIZE</th>
                                                                     <th style="color: #7A7A7A;font-family: Poppins, sans-serif;font-size: 1.2vh;font-weight: 700;">VENUE</th>
-                                                                    <th style="color: #7A7A7A;font-family: Poppins, sans-serif;font-size: 1.2vh;font-weight: 700;">TOTAL FEE (HK$)</th>
+                                                                    <th style="color: #7A7A7A;font-family: Poppins, sans-serif;font-size: 1.2vh;font-weight: 700;">TOTAL FEE (RM)</th>
                                                                     <th style="color: #7A7A7A;font-family: Poppins, sans-serif;font-size: 1.2vh;font-weight: 700;">COACH(ES)</th>
                                                                     <th style="color: #7A7A7A;font-family: Poppins, sans-serif;font-size: 1.2vh;font-weight: 700;">STATUS</th>
                                                                     <th style="color: #7A7A7A;font-family: Poppins, sans-serif;font-size: 14px;font-weight: 700;"></th>
@@ -731,7 +731,7 @@
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-xl-4 col-xxl-4">
-                                                                <h1 style="color: #636363;font-size: 0.8vw;font-weight: 400;font-family: Poppins, sans-serif;padding-top: 5px;padding-bottom: 5px;">Fee (HK$)</h1>
+                                                                <h1 style="color: #636363;font-size: 0.8vw;font-weight: 400;font-family: Poppins, sans-serif;padding-top: 5px;padding-bottom: 5px;">Fee (RM)</h1>
                                                             </div>
                                                             <div class="col">
                                                                 <h1 style="color: #636363;font-size: 0.8vw;font-weight: 400;font-family: Poppins, sans-serif;padding-top: 5px;padding-bottom: 5px;">1860</h1>
@@ -1082,7 +1082,7 @@
                                                                 <th style="color: #7A7A7A;font-family: Poppins, sans-serif;font-size: 14px;font-weight: 700;">TIME<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-caret-down-fill" style="margin-left: 5px;">
                                                                         <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"></path>
                                                                     </svg></th>
-                                                                <th style="color: #7A7A7A;font-family: Poppins, sans-serif;font-size: 14px;font-weight: 700;">TOTAL FEE (HK$)<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-caret-down-fill" style="margin-left: 5px;">
+                                                                <th style="color: #7A7A7A;font-family: Poppins, sans-serif;font-size: 14px;font-weight: 700;">TOTAL FEE (RM)<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-caret-down-fill" style="margin-left: 5px;">
                                                                         <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"></path>
                                                                     </svg></th>
                                                                 <th style="color: #7A7A7A;font-family: Poppins, sans-serif;font-size: 14px;font-weight: 700;">COURSE CATEGORY<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-caret-down-fill" style="margin-left: 5px;">

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Session;
+use Stripe\Checkout\Session as StripeSession;
 
 class ShoppingController extends Controller
 {
@@ -21,7 +22,7 @@ class ShoppingController extends Controller
     $shoppingProducts = $apiResponse2;
 
     $shoppingProducts =  $shoppingProducts['products'];
-    // dd($shoppingProducts, $shoppingCategories);
+    //  dd($shoppingProducts, $shoppingCategories);
     return view("theme::shopping.shopping", [
       'shoppingCategories' => $shoppingCategories,
       'shoppingProducts' => $shoppingProducts,
@@ -67,6 +68,9 @@ class ShoppingController extends Controller
     $apiResponse2 = get($apiUrl2);
     $schoolVenues = $apiResponse2;
     
+    // $shoppingProducts = $apiResponse;
+    // $shoppingProducts = $shoppingProducts['product'];
+    // dd($shoppingProducts);
     // $shoppingProducts =  $shoppingProducts['products'];
     return view("theme::shopping.item", [
       'shoppingProduct' => $shoppingProducts[0],
@@ -75,6 +79,82 @@ class ShoppingController extends Controller
       'productImages' => $shoppingProducts
     ]);
   }
+
+//   public function success(Request $request)
+// {
+//     $apiUrl = config('services.api_url') . '/create-payment-intent';
+
+//     $response = Http::post($apiUrl);
+//     // dd($response->json());
+//     return view('theme::shopping.success');
+// }
+
+//   public function payment(Request $request)
+// {
+//     $requestData = [
+//         'amount' => $request->input('amount'),
+//         'currency' => $request->input('currency')
+//     ];
+//     //  dd($requestData);
+//     $apiUrl = config('services.api_url') . '/create-payment-intent';
+
+//     $response = Http::post($apiUrl, $requestData);
+//     // dd($response);
+//     // $clientSecret = $response->json()['clientSecret'];
+//     // dd($response->json());
+//     return view('theme::shopping.payment', [
+//         // 'clientSecret' => $clientSecret,
+//         'amount' => $request->input('amount'),
+//         'currency' => $request->input('currency'),
+//         'product_id' => $request->input('product_id'),
+//         'quantity' => $request->input('quantity'),
+//         'venue_id' => $request->input('venue_id')
+//     ]);
+// }
+public function payment(Request $request)
+{
+  dd($request->all());
+    \Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+
+    try {
+        // Create a new Checkout Session for the payment
+        $session = StripeSession::create([
+            'payment_method_types' => ['card'],
+            'line_items' => [[
+                'price_data' => [
+                    'currency' => $request->currency,
+                    'product_data' => [
+                        'name' => $request->product_name,
+                    ],
+                    'unit_amount' => $request->amount,
+                ],
+                'quantity' => $request->quantity,
+            ]],
+            'mode' => 'payment',
+            'phone_number_collection' => ['enabled' => true],
+            'success_url' => route('success'),
+            'cancel_url' =>route('cancel'),
+            'metadata' => [
+              'product_picture' => $request->product_pic // Pass the picture URL as metadata
+          ]
+        ]);
+
+        // Redirect to the Stripe hosted checkout page
+        return redirect()->away($session->url);
+    } catch (\Exception $e) {
+        // Handle any exceptions
+        return response()->json(['error' => $e->getMessage()], 500);
+    }
+}
+public function showSuccess()
+{
+  return view("theme::shopping.success");
+}
+public function showCancel()
+{
+  return view("theme::shopping.cancel");
+}
+
   public function addToCart(Request $request)
   {
     $userId = $request->session()->get('userSession')['id'];
@@ -84,7 +164,7 @@ class ShoppingController extends Controller
       'quantity' => $request->input('quantity'),
       'venue_id' => $request->input('venue_id')
     ];
-    // dd($requestData);
+    //  dd($requestData);
     $apiUrl = config('services.api_url') . '/cart-details/add';
     $apiResponse = post($apiUrl, $requestData);
     // dd($apiResponse);

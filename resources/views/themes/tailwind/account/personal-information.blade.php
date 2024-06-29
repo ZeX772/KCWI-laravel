@@ -331,7 +331,7 @@
                                         <p class="p14b" style="margin-bottom: 0px;">{{ isset($response['email'])?$response['email']:''; }}</p>
                                     </div>
                                     <div class="textField d-xl-flex d-xxl-flex justify-content-between align-items-xl-center align-items-xxl-center" style="padding: 20px;">
-                                        <p class="p14b1" style="margin-bottom: 0px;">HKID</p>
+                                        <p class="p14b1" style="margin-bottom: 0px;">hkid</p>
                                         <p class="p14b" style="margin-bottom: 0px;">{{ isset($response['hkid'])?$response['hkid']:''; }}</p>
                                     </div>
                                     @if(session('userSession')['role_id'] != 2)

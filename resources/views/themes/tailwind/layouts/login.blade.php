@@ -10,18 +10,9 @@ $routeName = Route::currentRouteName();
 <html lang="{{ app()->getLocale() }}">
 <head>
 
-    <!-- @if(isset($seo->title))
-        <title>{{ $seo->title }}</title>
-    @else
-        <title>{{ setting('site.title', 'Laravel Wave') . ' - ' . setting('site.description', 'The Software as a Service Starter Kit built on Laravel & Voyager') }}</title>
-    @endif -->
 
-    @if( null !== session('school') )
-        <title><?= session('school')['name'] != "" ? session('school')['name'] : 'BlitzWiZ Gym' ?></title>
-    @else
-        <title>BlitzWiZ Gym</title>
-    @endif
-
+        <title>{{ setting('site.title', 'BlitzWiz Gym') }}</title> 
+{{-- here to change the header --}}
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge"> <!-- † -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

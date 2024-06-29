@@ -3,8 +3,6 @@ $routeName = Route::currentRouteName();
 
 $logo = '/themes/tailwind/images/Logo.png';
 
-if ($school = session('school'))
-    $logo = $school['logo'] != '' ? $school['logo'] : $logo;
 
 $incomingRequest = "0";
 if ( $incomingRequest = session('total_request') )

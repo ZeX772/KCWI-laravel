@@ -13,8 +13,15 @@ use Wave\Http\Controllers\Auth\VerificationController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use Wave\Http\Controllers\Auth\ForgotPasswordController as CustomerForgotPasswordController;
 use Wave\Http\Controllers\Auth\LoginController as AuthLoginController;
+use Wave\Http\Controllers\ShoppingController;
 
 Route::impersonate();
+
+
+Route::post('/process-payment', [ShoppingController::class, 'payment'])->name('processPayment');
+Route::get('/payment', [ShoppingController::class, 'showPayment'])->name('payment');
+Route::get('/success', [ShoppingController::class, 'showSuccess'])->name('success');
+Route::get('/cancel', [ShoppingController::class, 'showCancel'])->name('cancel');
 
 // Route::get('/auth-login', function () {
 //     return view('login.blade.php'); // Update with the actual name of your Blade view
@@ -169,9 +176,6 @@ Route::group(['middleware' => 'cms'], function () {
 		Route::get('admin-main/invoices', '\Wave\Http\Controllers\Admin\AdminMainController@invoices')->name('wave.user.admin-main.invoices');
 	});
 
-	Route::group(['middleware' => 'check.permission:accounting'], function () {
-		Route::get('admin-main/accounting', '\Wave\Http\Controllers\Admin\AdminMainController@accounting')->name('wave.user.admin-main.accounting');
-	});
 
 	Route::group(['middleware' => 'check.permission:payroll'], function () {
 		Route::get('admin-main/payroll', '\Wave\Http\Controllers\Admin\AdminMainController@payroll')->name('wave.user.admin-main.payroll');
@@ -295,21 +299,6 @@ Route::group(['middleware' => 'cms-customer'], function () {
 	Route::get('/my-order', 'Wave\Http\Controllers\ShoppingController@showMyOrder')->name('wave.my-order');
 	Route::get('/order1', 'Wave\Http\Controllers\ShoppingController@showOrder1')->name('wave.order1');
 	Route::get('/order2', 'Wave\Http\Controllers\ShoppingController@showOrder2')->name('wave.order2');
-	Route::get('/buy-ticket1', 'Wave\Http\Controllers\ShoppingController@showBuyTicketProcess1')->name('wave.ticket1');
-	Route::post('/buy-ticket1', function (Request $request) {
-		$data = $request->all();
-		return response()->json($data);
-	});
-	Route::get('/buy-ticket2', 'Wave\Http\Controllers\ShoppingController@showBuyTicketProcess2')->name('wave.ticket2');
-	Route::post('/buy-ticket2', function (Request $request) {
-		$data = $request->all();
-		return response()->json($data);
-	});
-	Route::get('/buy-ticket3', 'Wave\Http\Controllers\ShoppingController@showBuyTicketProcess3')->name('wave.ticket3');
-	Route::post('/buy-ticket3', function (Request $request) {
-		$data = $request->all();
-		return response()->json($data);
-	});
 	Route::get('/preview-invoice2', 'Wave\Http\Controllers\ShoppingController@showInvoice')->name('wave.invoice2');
 	Route::get('/online-payment', 'Wave\Http\Controllers\ShoppingController@showOnlinePayment')->name('wave.online-payment');
 

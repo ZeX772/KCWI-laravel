@@ -14,14 +14,9 @@ $routeName = Route::currentRouteName();
     <!-- @if(isset($seo->title))
     <title>{{ $seo->title }}</title>
     @else
-    <title>{{ setting('site.title', 'BlitzWiZ') . ' - ' . setting('site.description', 'BlitzWiZ Gym') }}</title>
+    <title>{{ setting('site.title', 'BlitzWiZ Gym') . ' - ' . setting('site.description', 'BlitzWiZ Gym') }}</title>
     @endif -->
 
-    @if( null !== session('school') )
-        <title><?= session('school')['name'] != "" ? session('school')['name'] : 'BlitzWiZ Gym' ?></title>
-    @else
-        <title>BlitzWiZ Gym</title>
-    @endif
 
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge"> <!-- † -->

@@ -249,7 +249,7 @@
                 <div class="d-xl-flex d-xxl-flex align-items-xl-center align-items-xxl-center textField" style="margin-top: 20px;margin-bottom: 10px;width: 100%;height: auto;padding-top: 10px;padding-bottom: 10px;padding-right: 40px;padding-left: 40px;">
                     <div class="d-xl-flex d-xxl-flex flex-column align-items-xl-start justify-content-xxl-start align-items-xxl-start" style="width: 100%;">
                         <p class="p13normal" style="margin-bottom: 0px;opacity: 0.50;font-style:normal;">
-                            <strong>HKID</strong></p>
+                            <strong>hkid</strong></p>
                         <input name="hkid" id="hkid" type="text" class="textField1" style="margin-top:0px;height: auto;width: 100%;background: transparent;border-style: none;border-bottom-style: none;font-size: 18px;padding-top: 5px;padding-right: 5px;padding-bottom: 5px;padding-left: 5px;" value="{{ $response['hkid'] }}">
                     </div>
                 </div>

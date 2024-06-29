@@ -304,7 +304,7 @@
                                             <th class="text-left">COACH</th>
                                             <th class="text-left">DATE</th>
                                             <th class="text-left">TIME</th>
-                                            <th class="text-left">TOTAL FEE (HK$)</th>
+                                            <th class="text-left">TOTAL FEE (RM)</th>
                                             <th class="text-left">COURSE CATEGORY</th>
                                         </tr>
                                     </thead>
@@ -342,7 +342,7 @@
                                             <th class="text-left">COACH</th>
                                             <th class="text-left">DATE</th>
                                             <th class="text-left">TIME</th>
-                                            <th class="text-left">TOTAL FEE (HK$)</th>
+                                            <th class="text-left">TOTAL FEE (RM)</th>
                                             <th class="text-left">COURSE CATEGORY</th>
                                         </tr>
                                     </thead>

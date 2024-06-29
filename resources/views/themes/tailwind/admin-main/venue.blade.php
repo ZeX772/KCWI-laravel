@@ -1106,7 +1106,7 @@
 				draggable: true,
 				position: {lat: 22.3193, lng: 114.1694},
 				map: map,
-				title: 'Hong Kong' // Optional: Marker tooltip text
+				title: 'Malaysia' // Optional: Marker tooltip text
 			});
 
 			console.log(marker);

@@ -700,7 +700,7 @@
                                         <div class="d-md-flex d-lg-flex d-xl-flex flex-row align-items-md-center align-items-lg-center justify-content-xxl-start align-items-xxl-center divcard shopping-frame" style="padding: 15px; max-height: 250px; margin-bottom: 20px;">
                                             <div style="display: flex; align-items: center; gap: 15px">
                                                 <div style="width: 117px; height: 122px; position: relative;">
-                                                    <img src="{{ $item['image_path'] ? $item['image_path'] : asset('/themes/tailwind/images/default.jpeg') }}" style="width: 117px; min-height: 122px; object-fit: cover;">
+                                                    <img src="{{ $item['stored_file_name'] ? $item['stored_file_name'] : asset('/themes/tailwind/images/default.jpeg') }}" style="width: 117px; min-height: 122px; object-fit: cover;">
                                                 </div>
                                                 <div>
                                                     <p class="p18red" style="margin-bottom: 2px;">RM {{ $item['price'] }}</p>
@@ -733,7 +733,7 @@
                             @foreach ($levels as $level)
                                 <div class="d-inline-flex flex-column align-items-xxl-center gap-2">
                                     {{-- <a href="{{ route('wave.levellists', ['id' => $level['id']]) }}">
-                                        <img src="{{ isset($level) && $level['banner'] != '' ?$level['banner']: 'https://rma-zone.b-cdn.net/kcwi/level-icon/default-level-icon.png'; }}" style="width: 99px; min-height: 95px; border-radius: 26px; object-fit: cover;">
+                                        <img src="{{ isset($level) && $level['banner'] != '' ?$level['banner']: 'https://kcwi-storage.b-cdn.net/kcwi/level-icon/default-level-icon.png'; }}" style="width: 99px; min-height: 95px; border-radius: 26px; object-fit: cover;">
                                     </a> --}}
                                     <p class="text-nowrap p14b" style="margin-bottom: 0px; font-size: 14px; font-weight: 600;">
                                         {{ strlen($level['name']) > 13 ? substr($level['name'], 0, 13) . '...' : $level['name'] }}

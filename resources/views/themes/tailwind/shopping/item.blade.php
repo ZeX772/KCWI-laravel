@@ -661,7 +661,7 @@
                     </div>
 
                     <div class="col">
-                        <p class="p36red">HK${{ $shoppingProduct['price'] }}</p>
+                        <p class="p36red">RM{{ $shoppingProduct['price'] }}</p>
                         <p class="p24b">{{ $shoppingProduct['name'] }}</p>
                         <div>
                             <p class="text-start colour" style="margin-bottom: 5px;">Colour</p>
@@ -681,7 +681,7 @@
                                 <p class="text-start colour" style="margin-bottom: 5px;">Quantity</p>
                             </div>
 
-                            <select id="quantity"
+                            <select id="quantity-select"
                                 style="height: 42px; width: 80px; text-align: center; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; font-family: var(--text-text-medium-2-font-family, 'Poppins-Medium', sans-serif); color: var(--appcolortone-primary, #171433); padding-right: 10px;text-indent: 25px;"
                                 name="quantity">
                                 <option value="1">1</option>
@@ -690,6 +690,7 @@
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select>
+                
                             <p class="text-start colour" style="left:20%;margin-top:-35px;">Stock: {{
                                 $shoppingProduct['stock_remaining'] }}</p>
                         </div>
@@ -719,8 +720,21 @@
                                 </div>
                                 <div class="col">
     </form>
-    <button id="buyNowButton" class="button1" type="button" style="background: #AAC9E4;color: #171433; height: 60px;"
-        data-product_id="{{ $shoppingProduct['id'] }}">Buy Now</button>
+    {{-- <button id="buyNowButton" class="button1" type="button" style="background: #AAC9E4;color: #171433; height: 60px;"
+        data-product_id="{{ $shoppingProduct['id'] }}">Buy Now</button> --}}
+        @foreach ($productImages as $index => $productImage)
+        <form id="buyNowForm" action="{{ route('processPayment') }}" method="POST">
+            @csrf
+            <input type="hidden" name="product_id" value="{{ $shoppingProduct['id'] }}">
+            <input type="hidden" name="product_name" value="{{ $shoppingProduct['name'] }}">
+            <input type="hidden" name="product_pic" value="{{ $productImage['image_path'] }}">
+            <input type="hidden" name="quantity" id="hidden-quantity" value="1">
+            <input type="hidden" name="amount" value="{{  $shoppingProduct['price'] * 100}}"> 
+            <input type="hidden" name="currency" value="myr">
+            <input type="hidden" name="venue_id" id="venue_id" value="{{  $schoolVenue['id'] }}">
+            <button id="buyNowButton" class="button1" type="submit" style="background: #AAC9E4;color: #171433; height: 60px;">Buy Now</button>
+        </form>
+        @endforeach
 </div>
 </div>
 </div>
@@ -765,7 +779,7 @@
                         class="col d-xxl-flex flex-column justify-content-xxl-center align-items-xxl-center item-frame">
                         <img src="{{ asset('themes/tailwind/images/clipboard-image-99.png') }}" style="width: 141px;">
                         <div style="width: 100%;">
-                            <p class="p37red" style="text-align:center;margin-bottom: 5px;">HK$ 188</p>
+                            <p class="p37red" style="text-align:center;margin-bottom: 5px;">RM 188</p>
                             <p class="p15b" style="text-align:center;">CN 2PB SHORTSWIM<br>NAVY PLANET
                             </p>
                         </div>
@@ -774,7 +788,7 @@
                         class="col d-xxl-flex flex-column justify-content-xxl-center align-items-xxl-center item-frame">
                         <img src="{{ asset('themes/tailwind/images/clipboard-image-99.png') }}" style="width: 141px;">
                         <div style="width: 100%;">
-                            <p class="p37red" style="text-align:center;margin-bottom: 5px;">HK$ 188</p>
+                            <p class="p37red" style="text-align:center;margin-bottom: 5px;">RM 188</p>
                             <p class="p15b" style="text-align:center;">CN 2PB SHORTSWIM<br>NAVY PLANET
                             </p>
                         </div>
@@ -783,7 +797,7 @@
                         class="col d-xxl-flex flex-column justify-content-xxl-center align-items-xxl-center item-frame">
                         <img src="{{ asset('themes/tailwind/images/clipboard-image-99.png') }}" style="width: 141px;">
                         <div style="width: 100%;">
-                            <p class="p37red" style="text-align:center;margin-bottom: 5px;">HK$ 188</p>
+                            <p class="p37red" style="text-align:center;margin-bottom: 5px;">RM 188</p>
                             <p class="p15b" style="text-align:center;">CN 2PB SHORTSWIM<br>NAVY PLANET
                             </p>
                         </div>
@@ -792,7 +806,7 @@
                         class="col d-xxl-flex flex-column justify-content-xxl-center align-items-xxl-center item-frame">
                         <img src="{{ asset('themes/tailwind/images/clipboard-image-99.png') }}" style="width: 141px;">
                         <div style="width: 100%;">
-                            <p class="p37red" style="text-align:center;margin-bottom: 5px;">HK$ 188</p>
+                            <p class="p37red" style="text-align:center;margin-bottom: 5px;">RM 188</p>
                             <p class="p15b" style="text-align:center;">CN 2PB SHORTSWIM<br>NAVY PLANET
                             </p>
                         </div>
@@ -805,7 +819,7 @@
                         <div class="d-xxl-flex flex-column justify-content-xxl-start align-items-xxl-center"
                             style="width: 100%;height: auto;">
                             <div class="d-xxl-flex justify-content-between align-items-xxl-center" style="width: 100%;">
-                                <div>
+                                {{-- <div>
                                     <ul class="nav nav-tabs nav-fill" role="tablist" style="border-style: none;">
                                         <li class="nav-item" role="presentation"><a class="nav-link1 active" role="tab"
                                                 data-bs-toggle="tab" href="#tab1">Wetsuit Bottoms</a>
@@ -815,131 +829,11 @@
                                                 style="font-family: Barlow, sans-serif;"><strong>Wetsuit
                                                     Tops</strong></a></li>
                                     </ul>
-                                </div>
-                                <div>
-                                    <ul class="nav nav-tabs nav-fill" role="tablist2" style="border-style: none;">
-                                        <li class="nav-item" role="presentation"><a class="nav-link1 active" role="tab"
-                                                data-bs-toggle="tab" href="#tab3">CM</a></li>
-                                        <li class="nav-item" role="presentation"><a class="nav-link1" role="tab"
-                                                data-bs-toggle="tab" href="#tab4"
-                                                style="font-family: Barlow, sans-serif;">IN</a></li>
-                                    </ul>
-                                </div>
+                                </div> --}}
+                              
                             </div>
-                            <div class="tab-content" style="width: 100%;padding: 15px;">
-                                <div id="tab1" class="tab-pane active" role="tabpanel" style="height: 100%;">
-                                    <div class="table-responsive" style="text-align: center;margin-top: 10px;">
-                                        <table class="table table-sm table-bordered">
-                                            <thead>
-                                                <tr style="background: #F5F5F5;">
-                                                    <th class="p16b" style="font-weight: bold;background: #B0B0B0;">Size
-                                                    </th>
-                                                    <th class="p16b" style="font-weight: bold;background: #B0B0B0;">
-                                                        Bottoms Length</th>
-                                                    <th class="p16b" style="font-weight: bold;background: #B0B0B0;">Hip
-                                                        Size</th>
-                                                    <th class="p16b" style="font-weight: bold;background: #B0B0B0;">
-                                                        Waist Size</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="p16b" style="font-weight: bold;background: #F5F5F5;">110
-                                                    </td>
-                                                    <td class="p16b">23</td>
-                                                    <td class="p16b">62</td>
-                                                    <td class="p16b">54-75</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="p16b" style="font-weight: bold;background: #F5F5F5;">120
-                                                    </td>
-                                                    <td class="p16b">23.8</td>
-                                                    <td class="p16b">65</td>
-                                                    <td class="p16b">57-78</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="p16b" style="font-weight: bold;background: #F5F5F5;">130
-                                                    </td>
-                                                    <td class="p16b">24.6</td>
-                                                    <td class="p16b">68</td>
-                                                    <td class="p16b">60-81</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="p16b" style="font-weight: bold;background: #F5F5F5;">140
-                                                    </td>
-                                                    <td class="p16b">26.1</td>
-                                                    <td class="p16b">74</td>
-                                                    <td class="p16b">66-87</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="p16b" style="font-weight: bold;background: #F5F5F5;">150
-                                                    </td>
-                                                    <td class="p16b">28.3</td>
-                                                    <td class="p16b">78</td>
-                                                    <td class="p16b">70-93</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div id="tab2" class="tab-pane" role="tabpanel">
-                                    <div class="table-responsive" style="text-align: center;margin-top: 10px;">
-                                        <table class="table table-sm table-bordered">
-                                            <thead>
-                                                <tr style="background: #F5F5F5;">
-                                                    <th class="p16b" style="font-weight: bold;background: #B0B0B0;">Size
-                                                    </th>
-                                                    <th class="p16b" style="font-weight: bold;background: #B0B0B0;">
-                                                        Bottoms Length</th>
-                                                    <th class="p16b" style="font-weight: bold;background: #B0B0B0;">Hip
-                                                        Size</th>
-                                                    <th class="p16b" style="font-weight: bold;background: #B0B0B0;">
-                                                        Waist Size</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="p16b" style="font-weight: bold;background: #F5F5F5;">110
-                                                    </td>
-                                                    <td class="p16b">9.1</td>
-                                                    <td class="p16b">24.4</td>
-                                                    <td class="p16b">21.3-29.5</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="p16b" style="font-weight: bold;background: #F5F5F5;">120
-                                                    </td>
-                                                    <td class="p16b">9.4</td>
-                                                    <td class="p16b">25.6</td>
-                                                    <td class="p16b">22.4-30.7</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="p16b" style="font-weight: bold;background: #F5F5F5;">130
-                                                    </td>
-                                                    <td class="p16b">9.7</td>
-                                                    <td class="p16b">26.8</td>
-                                                    <td class="p16b">23.6-31.9</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="p16b" style="font-weight: bold;background: #F5F5F5;">140
-                                                    </td>
-                                                    <td class="p16b">10.3</td>
-                                                    <td class="p16b">29.1</td>
-                                                    <td class="p16b">26-34.3</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="p16b" style="font-weight: bold;background: #F5F5F5;">150
-                                                    </td>
-                                                    <td class="p16b">13.6</td>
-                                                    <td class="p16b">33.5</td>
-                                                    <td class="p16b">29-38.4</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div id="tab3" class="tab-pane" role="tabpanel"></div>
-                                <div id="tab4" class="tab-pane" role="tabpanel"></div>
-                            </div>
+                           
+                     
                         </div>
                     </div>
                 </div>
@@ -969,6 +863,7 @@
 </body>
 @endsection
 
+
 @section('javascript')
 <script>
     // JavaScript to handle selection and display
@@ -979,8 +874,17 @@
         });
     });
 </script>
+<script src="https://js.stripe.com/v3/"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
+   document.addEventListener('DOMContentLoaded', function () {
+            const selectElement = document.getElementById('quantity-select');
+            const hiddenQuantityInput = document.getElementById('hidden-quantity');
+
+            selectElement.addEventListener('change', function () {
+                hiddenQuantityInput.value = selectElement.value;
+            });
+        });
     $(document).ready(function() {
             //* Events Functions
             var userData = null;
@@ -988,55 +892,242 @@
             var addToCartResponseData = {};
 
             initializeEvents();
-
             function initializeEvents()
-            {
-                userData = <?= json_encode($user) ?>;
+{
+//     document.addEventListener("DOMContentLoaded", async function () {
+//     const stripe = Stripe('{{ env("STRIPE_KEY") }}');
 
-                $('.product-item_container').on('click', '#openModalButton', async function(){
-                    $(this).prop('disabled', true);
+//     const buyNowForm = document.getElementById('buyNowForm');
+//     const buyNowButton = document.getElementById('buyNowButton');
 
-                    const productID = $(this).data('product_id');
-                    const quantity = $('.product-item_container select[name=quantity]').val();
-                    const venue = $('.product-item_container .venues-item-container .venues-item.active').data('venue_id');
+//     buyNowForm.addEventListener('submit', async (event) => {
+//         event.preventDefault();
+//         buyNowButton.disabled = true;
 
-                    const formData = {
-                        user_id: userData.id,
-                        product_id: productID,
-                        quantity: parseInt(quantity),
-                        venue_id: venue,
-                    };
-                    console.log("FormData:", formData);
-                    await addToCart(this, formData, 'add-to-cart')
+//         const productID = buyNowForm.querySelector('input[name="product_id"]').value;
+//         const quantity = document.querySelector('.product-item_container select[name="quantity"]').value;
+//         const venue = document.querySelector('.product-item_container .venues-item-container .venues-item.active').dataset.venue_id;
 
-                    hasError = false;
-                    addToCartResponseData = {};
-                });
+//         const formData = {
+//             user_id: userData.id,
+//             product_id: productID,
+//             quantity: parseInt(quantity),
+//             venue_id: venue,
+//         };
 
-                $('.product-item_container').on('click', '#buyNowButton', async function(){
-                    $(this).prop('disabled', true);
+//         try {
+//             // Call your backend to create a payment intent and get the session ID
+//             const response = await fetch('/create-payment-intent', {
+//                 method: 'POST',
+//                 headers: {
+//                     'Content-Type': 'application/json',
+//                     'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+//                 },
+//                 body: JSON.stringify({
+//                     amount: addToCartResponseData.total * 100, // Stripe expects amount in cents
+//                     currency: 'myr',
+//                 }),
+//             });
 
-                    const productID = $(this).data('product_id');
-                    const quantity = $('.product-item_container select[name=quantity]').val();
-                    const venue = $('.product-item_container .venues-item-container .venues-item.active').data('venue_id');
+//             const { sessionId, error } = await response.json();
 
-                    const formData = {
-                        user_id: userData.id,
-                        product_id: productID,
-                        quantity: parseInt(quantity),
-                        venue_id: venue,
-                    };
+//             if (error) {
+//                 console.error(error);
+//                 // Handle error condition
+//                 buyNowButton.disabled = false;
+//                 return;
+//             }
 
-                    await addToCart(this, formData, 'buy-now')
+//             // Redirect to Stripe Checkout hosted page
+//             const { error: stripeError } = await stripe.redirectToCheckout({
+//                 sessionId: sessionId,
+//             });
 
-                    if(! hasError ) {
-                        buyNowRedirection(addToCartResponseData)
-                    }
+//             if (stripeError) {
+//                 console.error('Stripe error:', stripeError);
+//                 // Handle Stripe error
+//                 buyNowButton.disabled = false;
+//             }
+//         } catch (error) {
+//             console.error('Error:', error);
+//             buyNowButton.disabled = false;
+//         }
+//     });
+// });
+var stripe = Stripe('{{ env('STRIPE_KEY') }}');
 
-                    // after adding to cart, redirect to online payment
-                    hasError = false;
-                    addToCartResponseData = {};
-                });
+var checkoutButton = document.getElementById('checkout-button');
+checkoutButton.addEventListener('click', function () {
+    var product_name = document.getElementById('product_name').value;
+    var product_pic = document.getElementById('product_pic').value;
+    var amount = document.getElementById('amount').value;
+    var currency = document.getElementById('currency').value;
+    var quantity = document.getElementById('quantity').value; // Get the selected quantity
+
+    fetch('/process-payment', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+        },
+        body: JSON.stringify({
+            product_name: product_name,
+            product_pic: product_pic,
+            amount: amount,
+            currency: currency,
+            quantity: quantity // Pass the selected quantity
+        }),
+    })
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(session) {
+        return stripe.redirectToCheckout({ sessionId: session.id });
+    })
+    .then(function(result) {
+        if (result.error) {
+            console.error(result.error.message);
+        }
+    })
+    .catch(function(error) {
+        console.error('Error:', error);
+    });
+});
+
+//     userData = <?= json_encode($user) ?>;
+
+//     $('.product-item_container').on('click', '#openModalButton', async function(){
+//         $(this).prop('disabled', true);
+
+//         const productID = $(this).data('product_id');
+//         const quantity = $('.product-item_container select[name=quantity]').val();
+//         const venue = $('.product-item_container .venues-item-container .venues-item.active').data('venue_id');
+
+//         const formData = {
+//             user_id: userData.id,
+//             product_id: productID,
+//             quantity: parseInt(quantity),
+//             venue_id: venue,
+//         };
+//         console.log("FormData:", formData);
+//         await addToCart(this, formData, 'add-to-cart')
+
+//         hasError = false;
+//         addToCartResponseData = {};
+//     });
+
+//     $('.product-item_container').on('click', '#buyNowButton', async function(){
+//         $(this).prop('disabled', true);
+
+//         const productID = $(this).data('product_id');
+//         const quantity = $('.product-item_container select[name=quantity]').val();
+//         const venue = $('.product-item_container .venues-item-container .venues-item.active').data('venue_id');
+
+//         const formData = {
+//             user_id: userData.id,
+//             product_id: productID,
+//             quantity: parseInt(quantity),
+//             venue_id: venue,
+//         };
+
+//         await addToCart(this, formData, 'buy-now')
+
+//         if(! hasError ) {
+//             // Create the payment intent
+//             const paymentIntentResponse = await fetch('/create-payment-intent', {
+//                 method: 'POST',
+//                 headers: {
+//                     'Content-Type': 'application/json',
+//                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+//                 },
+//                 body: JSON.stringify({
+//                     amount: addToCartResponseData.total * 100, // Stripe expects amount in cents
+//                     currency: 'myr'
+//                 })
+//             });
+
+//             const { clientSecret } = await paymentIntentResponse.json();
+
+//             // Initialize Stripe.js
+//             const stripe = Stripe('your-publishable-key-from-stripe');
+//             const elements = stripe.elements();
+//             const cardElement = elements.create('card');
+//             cardElement.mount('#card-element');
+
+//             // Handle the payment
+//             const { paymentIntent, error } = await stripe.confirmCardPayment(clientSecret, {
+//                 payment_method: {
+//                     card: cardElement,
+//                     billing_details: {
+//                         name: userData.name,
+//                         email: userData.email
+//                     }
+//                 }
+//             });
+
+//             if (error) {
+//                 console.error(error);
+//                 // Handle error here
+//             } else if (paymentIntent.status === 'succeeded') {
+//                 console.log('Payment succeeded!');
+//                 buyNowRedirection(addToCartResponseData);
+//             }
+//         }
+
+//         // after adding to cart, redirect to online payment
+//         hasError = false;
+//         addToCartResponseData = {};
+//     });
+// }
+
+            // function initializeEvents()
+            // {
+            //     userData = <?= json_encode($user) ?>;
+
+            //     $('.product-item_container').on('click', '#openModalButton', async function(){
+            //         $(this).prop('disabled', true);
+
+            //         const productID = $(this).data('product_id');
+            //         const quantity = $('.product-item_container select[name=quantity]').val();
+            //         const venue = $('.product-item_container .venues-item-container .venues-item.active').data('venue_id');
+
+            //         const formData = {
+            //             user_id: userData.id,
+            //             product_id: productID,
+            //             quantity: parseInt(quantity),
+            //             venue_id: venue,
+            //         };
+            //         console.log("FormData:", formData);
+            //         await addToCart(this, formData, 'add-to-cart')
+
+            //         hasError = false;
+            //         addToCartResponseData = {};
+            //     });
+
+            //     $('.product-item_container').on('click', '#buyNowButton', async function(){
+            //         $(this).prop('disabled', true);
+
+            //         const productID = $(this).data('product_id');
+            //         const quantity = $('.product-item_container select[name=quantity]').val();
+            //         const venue = $('.product-item_container .venues-item-container .venues-item.active').data('venue_id');
+
+            //         const formData = {
+            //             user_id: userData.id,
+            //             product_id: productID,
+            //             quantity: parseInt(quantity),
+            //             venue_id: venue,
+            //         };
+
+            //         await addToCart(this, formData, 'buy-now')
+
+            //         if(! hasError ) {
+            //             buyNowRedirection(addToCartResponseData)
+            //         }
+
+            //         // after adding to cart, redirect to online payment
+            //         hasError = false;
+            //         addToCartResponseData = {};
+            //     });
 
                 $('.product-item_container .venues-item-container').on('click', '.venues-item', function(){
                     $('.venues-item').removeClass('active');

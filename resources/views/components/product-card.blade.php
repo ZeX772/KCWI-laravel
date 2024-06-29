@@ -2,7 +2,7 @@
     $productCover = "";
     foreach ($data['images'] as $key => $value) {
         if( $value['is_cover'] == 1 )
-            $productCover = $value['image_path'];
+            $productCover = $value['stored_file_name'];
     }
 ?>
 <div class="product-card">
@@ -13,6 +13,7 @@
         </div>
     </div>
     <div class="product-body border-bottom open-modal"  data-id="{{ $data['id'] }}" data-bs-toggle="modal" data-bs-target="#product-info-modal">
+        
         <img src="{{ $productCover }}" alt="">
     </div>
     <div class="product-footer text-left p-3 open-modal" data-id="{{ $data['id'] }}" data-bs-toggle="modal" data-bs-target="#product-info-modal">

@@ -35,7 +35,7 @@
  									<th style="color: #7A7A7A;font-size: 12px;line-height: 21px;letter-spacing: 0.02em;text-align: left;">CLASS SIZE</th>
  									<th style="color: #7A7A7A;font-size: 12px;line-height: 21px;letter-spacing: 0.02em;text-align: left;">VENUE</th>
  									<th style="color: #7A7A7A;font-size: 12px;line-height: 21px;letter-spacing: 0.02em;text-align: left;">FACILITY</th>
- 									<th style="color: #7A7A7A;font-size: 12px;line-height: 21px;letter-spacing: 0.02em;text-align: left;">TOTAL FEE (HK$)</th>
+ 									<th style="color: #7A7A7A;font-size: 12px;line-height: 21px;letter-spacing: 0.02em;text-align: left;">TOTAL FEE (RM)</th>
  									<th style="color: #7A7A7A;font-size: 12px;line-height: 21px;letter-spacing: 0.02em;text-align: left;">COACH(ES)</th>
  									<th style="color: #7A7A7A;font-size: 12px;line-height: 21px;letter-spacing: 0.02em;text-align: left;">STATUS</th>
  									<th></th>
@@ -141,7 +141,7 @@
  									</div>
  									<div class="row" style="margin-bottom: 10px;">
  										<div class="col-md-6">
- 											<h1 style="color: #636363;font-size: 14px;font-family: Poppins, sans-serif;">Fee (HK$)</h1>
+ 											<h1 style="color: #636363;font-size: 14px;font-family: Poppins, sans-serif;">Fee (RM)</h1>
  										</div>
  										<div class="col-md-6">
  											<h1 id="detail-course_full_price" style="color: #7a7a7a;font-size: 14px;font-family: Poppins, sans-serif;">-</h1>
@@ -251,7 +251,7 @@
 							</div>
 							<div class="form-inline" style="width: 100%;margin-left: 10px;">
 								<div class="form-group">
-									<label class="form-label" style="color: #636363;font-size: 14px;">Fee (HK$) Per Class <span class="text-danger">*</span></label>
+									<label class="form-label" style="color: #636363;font-size: 14px;">Fee (RM) Per Class <span class="text-danger">*</span></label>
 									<input type="text" name="course_full_price" class="form-control" type="text" style="color: #3B3B3B;font-size: 14px;font-family: Nunito, sans-serif;background: #F5F5F5;border-style: none;height: 48px;">
 								</div>
 							</div>

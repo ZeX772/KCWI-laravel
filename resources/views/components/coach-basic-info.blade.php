@@ -33,7 +33,7 @@
                         </div> -->
                         <div class="col-4">
                             <div>
-                                <h1 style="color: #7A7A7A;font-size: 12px;font-family: Poppins, sans-serif;">HKID</h1>
+                                <h1 style="color: #7A7A7A;font-size: 12px;font-family: Poppins, sans-serif;">NRIC(MyKad)</h1>
                                 <h1 id="detail-hkid" style="color: #3B3B3B;font-size: 14px;font-family: Poppins, sans-serif;">{{ $entry['coach_details']['hkid'] }}</h1>
                             </div>
                         </div>

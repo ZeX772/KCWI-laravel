@@ -187,7 +187,7 @@
                                 <th class="text-left">#</th>
                                 <th class="text-left">NAME</th>
                                 <th class="text-left">CHINESE NAME</th>
-                                <th class="text-left">HKID</th>
+                                <th class="text-left">hkid</th>
                                 <th class="text-left">GENDER</th>
                                 <th class="text-left">DOB</th>
                                 <th class="text-left">LEVEL</th>
@@ -308,7 +308,7 @@
                                         isRequired=true
                                     />    
                                     <x-form-input 
-                                        label="Fee (HK$) Per Class" 
+                                        label="Fee (RM) Per Class" 
                                         type="number" 
                                         name="fee_per_class"
                                         id="fee_per_class"
@@ -618,7 +618,7 @@
                                         isRequired=true
                                     />    
                                     <x-form-input 
-                                        label="Fee (HK$) Per Class" 
+                                        label="Fee (RM) Per Class" 
                                         type="number" 
                                         name="fee_per_class"
                                         id="fee_per_class"

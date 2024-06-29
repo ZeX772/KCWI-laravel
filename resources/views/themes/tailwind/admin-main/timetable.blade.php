@@ -948,7 +948,7 @@
                                                 <th style="color: #7A7A7A;font-size: 12px;line-height: 21px;letter-spacing: 0.02em;text-align: left;">PHONE</th>
                                             </tr>
                                         </thead>
-                                        <tbody style="height: auto;">
+                                        {{-- <tbody style="height: auto;">
                                             @foreach($students as $key => $student)
                                             <tr style="border-bottom: 2px solid #E8E8E8;" data-row_index="{{ $key }}">
                                                 <td class="text-center"><input type="checkbox" class="check" data-id="{{ $student['id'] }}"></td>
@@ -958,7 +958,7 @@
                                                 <td style="color: #3B3B3B;font-family: Poppins, sans-serif;font-size: 12px;">{{ $student['student_information']['phone'] }}</td>
                                             </tr>
                                             @endforeach
-                                        </tbody>
+                                        </tbody> --}}
                                     </table>
                                 </div>
                             </div>
@@ -1016,7 +1016,7 @@
                                                 <th style="color: #7A7A7A;font-size: 12px;line-height: 21px;letter-spacing: 0.02em;text-align: left;">COACH</th>
                                                 <th style="color: #7A7A7A;font-size: 12px;line-height: 21px;letter-spacing: 0.02em;text-align: left;">DATE</th>
                                                 <th style="color: #7A7A7A;font-size: 12px;line-height: 21px;letter-spacing: 0.02em;text-align: left;">TIME</th>
-                                                <th style="color: #7A7A7A;font-size: 12px;line-height: 21px;letter-spacing: 0.02em;text-align: left;">TOTAL FEE (HK$)</th>
+                                                <th style="color: #7A7A7A;font-size: 12px;line-height: 21px;letter-spacing: 0.02em;text-align: left;">TOTAL FEE (RM)</th>
                                                 <th style="color: #7A7A7A;font-size: 12px;line-height: 21px;letter-spacing: 0.02em;text-align: left;">COURSE CATEGORY</th>
                                             </tr>
                                         </thead>

@@ -352,7 +352,7 @@
                                         </div>
                                     </div>
                                     <div class="container d-xxl-flex align-items-xxl-center form-input-container gap-4 mb-3">
-                                        <x-form-input label="Refund Amout (HK$)" type="text" name="refund_amount" id="refund_amount" isRequired=false placeholder="0.00" />
+                                        <x-form-input label="Refund Amout (RM)" type="text" name="refund_amount" id="refund_amount" isRequired=false placeholder="0.00" />
                                     </div>
                                     <div class="container" style="padding: 0px;color: #636363">
                                         <div class="form-inline">

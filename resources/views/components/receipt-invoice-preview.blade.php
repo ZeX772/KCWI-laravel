@@ -93,7 +93,7 @@
 
             <p class="mt-3">- Payment can be settled by Cash, Cheque, Bank Transfer, FPS or PayMe.</p>
             <p>- Enrollment is only confirmed onces fees are paid in full.</p>
-            <p>&nbsp; (Hang Seng Bank, acc no.: 395-501786-001, acc name: Hong Kong Swimming Academy Limited)</p>
+            <p>&nbsp; (Hang Seng Bank, acc no.: 395-501786-001, acc name:  Swimming Academy Limited)</p>
             <p>- No refund or transfer of any fees shall be allowed under any circumstances.</p>
             <p>- No refund or credit will be applied for any unattended lessons.</p>
         </div>

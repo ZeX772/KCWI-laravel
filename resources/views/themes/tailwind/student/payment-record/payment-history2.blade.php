@@ -242,7 +242,7 @@
                                 <div class="box d-xxl-flex flex-column align-items-xxl-start">
                                     <div class="d-xl-flex d-xxl-flex align-items-xl-center align-items-xxl-center"
                                         style="margin-bottom: 10px;">
-                                        <p class="p13" style="margin-right: 10px;margin-bottom: 0px;">Total fee (HK$):
+                                        <p class="p13" style="margin-right: 10px;margin-bottom: 0px;">Total fee (RM):
                                         </p>
                                         <p class="p13normal" style="margin-bottom: 0px;">{{ $entry['competition']['enrollment_price'] }}</p>
                                     </div>

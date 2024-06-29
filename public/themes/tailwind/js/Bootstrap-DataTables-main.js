@@ -128,7 +128,7 @@ $(function() {
                                     <div class="form-group"><label class="form-label" style="color: #636363;font-size: 14px;">Class Size (Maximum Number of Students)</label><input class="form-control" type="text" style="color: #3B3B3B;font-size: 14px;font-family: Nunito, sans-serif;background: #F5F5F5;border-style: none;height: 48px;"></div>
                                 </form>
                                 <form class="form-inline" style="width: 100%;margin-left: 10px;">
-                                    <div class="form-group"><label class="form-label" style="color: #636363;font-size: 14px;">Fee (HK$) Per Class</label><input class="form-control" type="text" style="color: #3B3B3B;font-size: 14px;font-family: Nunito, sans-serif;background: #F5F5F5;border-style: none;height: 48px;"></div>
+                                    <div class="form-group"><label class="form-label" style="color: #636363;font-size: 14px;">Fee (RM) Per Class</label><input class="form-control" type="text" style="color: #3B3B3B;font-size: 14px;font-family: Nunito, sans-serif;background: #F5F5F5;border-style: none;height: 48px;"></div>
                                 </form>
                             </div>
                             <div class="container" style="padding: 0px;color: #636363;">
