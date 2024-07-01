@@ -34,9 +34,8 @@
  									<th style="color: #7A7A7A;font-size: 14px;line-height: 21px;letter-spacing: 0.02em;text-align: left;">COURSE CODE</th>
  									<th style="color: #7A7A7A;font-size: 14px;line-height: 21px;letter-spacing: 0.02em;text-align: left;">COURSE LEVEL</th>
  									<th style="color: #7A7A7A;font-size: 14px;line-height: 21px;letter-spacing: 0.02em;text-align: left;">CLASS SIZE</th>
- 									<th style="color: #7A7A7A;font-size: 14px;line-height: 21px;letter-spacing: 0.02em;text-align: left;">VENUE</th>
- 									<th style="color: #7A7A7A;font-size: 14px;line-height: 21px;letter-spacing: 0.02em;text-align: left;">FACILITY</th>
- 									<th style="color: #7A7A7A;font-size: 14px;line-height: 21px;letter-spacing: 0.02em;text-align: left;">TOTAL FEE (HK$)</th>
+ 									
+ 									<th style="color: #7A7A7A;font-size: 14px;line-height: 21px;letter-spacing: 0.02em;text-align: left;">TOTAL FEE (RM$)</th>
  									<th style="color: #7A7A7A;font-size: 14px;line-height: 21px;letter-spacing: 0.02em;text-align: left; width: 200px;">COACH(ES)</th>
  									<th style="color: #7A7A7A;font-size: 14px;line-height: 21px;letter-spacing: 0.02em;text-align: left;">STATUS</th>
  									<th></th>
@@ -49,18 +48,7 @@
 										<td style="color: #3B3B3B;font-family: Poppins, sans-serif;font-size: 14px;">{{ $course['course_name'] }}</td>
 										<td style="color: #3B3B3B;font-family: Poppins, sans-serif;font-size: 14px;">{{ $course['level']['abbreviation'] }}</td>
 										<td style="color: #3B3B3B;font-family: Poppins, sans-serif;font-size: 14px;">{{ $course['course_size'] }}</td>
-										<td style="color: #3B3B3B;font-family: Poppins, sans-serif;font-size: 14px;">{{ $course['venue_data']['short_name'] ?? '' }}</td>
-										<td style="color: #3B3B3B;font-family: Poppins, sans-serif;font-size: 14px;">
- 											@if(count($course['venue_data']['school_venue_facilities'] ?? []) > 0)
-												<div style="display: flex; flex-wrap: wrap; flex-direction: column;" class="gap-1">
-													@foreach($course['venue_data']['school_venue_facilities'] as $venueFacilities)
-														<span>{{ $venueFacilities['name'] }}</span>
-													@endforeach
-												</div>
-											@else
- 												<span>-</span>
-											@endif
-										</td>
+										
 										<td style="color: #3B3B3B;font-family: Poppins, sans-serif;font-size: 14px;">{{ $course['course_full_price'] }}</td>
 										<td style="color: #3B3B3B;font-family: Poppins, sans-serif;font-size: 14px;">
 											@if(count($course['coaches'] ?? []) > 0)
@@ -142,27 +130,10 @@
  											<h1 id="detail-class_size" style="color: #7a7a7a;font-size: 14px;font-family: Poppins, sans-serif;">-</h1>
  										</div>
  									</div>
+ 									
  									<div class="row" style="margin-bottom: 10px;">
  										<div class="col-md-6">
- 											<h1 style="color: #636363;font-size: 14px;font-family: Poppins, sans-serif;">Venue</h1>
- 										</div>
- 										<div class="col-md-6">
- 											<h1 id="detail-venue_name" style="color: #7a7a7a;font-size: 14px;font-family: Poppins, sans-serif;">-</h1>
- 										</div>
- 									</div>
- 									<div class="row" style="margin-bottom: 10px;">
- 										<div class="col-md-6">
- 											<h1 style="color: #636363;font-size: 14px;font-family: Poppins, sans-serif;">Facility</h1>
- 										</div>
- 										<div class="col-md-6">
-										 	<ul id="detail-venue_facility_name" style="padding: 0px;">
-											</ul>
- 											<!-- <h1 id="detail-venue_facility_name" style="color: #7a7a7a;font-size: 14px;font-family: Poppins, sans-serif;">-</h1> -->
- 										</div>
- 									</div>
- 									<div class="row" style="margin-bottom: 10px;">
- 										<div class="col-md-6">
- 											<h1 style="color: #636363;font-size: 14px;font-family: Poppins, sans-serif;">Fee (HK$)</h1>
+ 											<h1 style="color: #636363;font-size: 14px;font-family: Poppins, sans-serif;">Fee (RM$)</h1>
  										</div>
  										<div class="col-md-6">
  											<h1 id="detail-course_full_price" style="color: #7a7a7a;font-size: 14px;font-family: Poppins, sans-serif;">-</h1>
